@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>交易明细</title>
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/flexible.js"></script>
+</head>
+<body>
+<header class="top bg-white">
+    <div class="header-center ">
+        <a href="javascript:history.back(-1);" class="back">
+            <img src="images/back2.png" alt=""  style="height: 20px;width: 12px;">
+        </a>
+        <span class="top-title ">交易明细</span>
+    </div>
+</header>
+<section class="wrap-center">
+        <div class="bg-white tab-bar relative" >
+            <span class="bar1 bottom-color consumption" id="consumption">消费明细</span>
+            <span class="bar2 recharge-detail" id="rechargeDetail">充值明细</span>
+        </div>
+        <div class="tab1 tabal consumption-wrap" style="display:block;">
+            <!--没有消费-->
+            <!--<div class="img-content">-->
+                <!--<img src="images/no-consume.png" alt="">-->
+                <!--<div class="no-consume" style="">您还没有进行过消费呢</div>-->
+            <!--</div>-->
+            <!--<div class="border_bottom bg-white">-->
+                <!--<div class="transaction-content consumption-content relative">-->
+                    <!--<div class="tile-wrap">-->
+                        <!--<span class="">用伞消费</span><br>-->
+                        <!--<span>2017-04-08 17:39</span>-->
+                    <!--</div>-->
+                    <!--<div class="consumpt-money">20元</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="border_bottom bg-white">-->
+                <!--<div class="transaction-content consumption-content relative">-->
+                    <!--<div class="tile-wrap">-->
+                        <!--<span class="">用伞消费</span><br>-->
+                        <!--<span>2017-04-08 17:39</span>-->
+                    <!--</div>-->
+                    <!--<div class="consumpt-money">0元</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="tab2 tabal recharge-wrap" >
+            <!--没有充值-->
+            <!--<div class="img-content">-->
+                <!--<img src="images/no-recharge.png" alt="">-->
+                <!--<div class="no-recharge" style="">您还没有充值过呢</div>-->
+            <!--</div>-->
+            <!--<div class="border_bottom bg-white">-->
+                <!--<div class="transaction-content recharge-content relative">-->
+                    <!--<div class="tile-wrap">-->
+                        <!--<span class="">微信充值</span><br>-->
+                        <!--<span>2017-04-08 17:39</span>-->
+                    <!--</div>-->
+                    <!--<div class="recharge-money">120元</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="border_bottom bg-white">-->
+                <!--<div class="transaction-content recharge-content relative">-->
+                    <!--<div class="tile-wrap">-->
+                        <!--<span class="">支付宝充值</span><br>-->
+                        <!--<span>2017-04-08 17:39</span>-->
+                    <!--</div>-->
+                    <!--<div class="recharge-money">110元</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+        </div>
+        <div class="no-more">没有更多了</div>
+</section>
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/businessdetail.js"></script>
+</body>
+</html>

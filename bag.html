@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>我的钱包</title>
+    <!--<link rel="stylesheet" href="css/amazeui.min.css">-->
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/flexible.js"></script>
+</head>
+<body>
+<header class="top bg-white">
+    <div class="header-center">
+        <a href="index.html" class="back"><img src="images/back2.png" alt=""  style="height: 20px;width: 12px;"></a>
+        <span class="top-title">我的钱包</span>
+    </div>
+</header>
+<div class="bag-content wrap-center bg-white margin-top1">
+    <div class="my-balance">我的余额(元)</div>
+    <div class="balance-num"></div>
+    <div class="detail">
+        <button type="button" id="details" class="am-btn am-btn-block am-round ">交易明细</button>
+    </div>
+    <div class="warn">注意：余额若为负值则无法正常使用</div>
+</div>
+<div class="bg-white wrap-center">
+    <div style="box-sizing:border-box;border-bottom:1px solid #d6d6d6; border-top:1px solid #d6d6d6;">
+        <div class="width90">
+            <span class="" style="width: 2.893333rem">我的优惠券</span>
+            <a class="goto float-right checkCoupon" style="text-align: right;"><img src="images/goto.png" alt="" style="width: 9px;height: 14px;"></a>
+        </div>
+    </div>
+    <div>
+        <div class="width90">
+            <span class="my-deposit">我的押金</span>
+            <input type="text" maxlength="7" class="text-right myDeposit" placeholder="" value="￥0.00" readonly="readonly">
+        </div>
+    </div>
+</div>
+<div class="recharge-cash wrap-center center">
+    <button type="button" class="recharge" style=" cursor:pointer;">充值</button>
+    <button type="button" class="withdraw_cash" style=" cursor:pointer;">押金提现</button>
+</div>
+<div class="quitPopup">
+    <div class="Popup-top">您还未充押金</div>
+    <div class="Popup-bottom">
+        <a class="cancel Popup-half" style=" cursor:pointer;">取消</a>
+        <a class="goRecharge Popup-half" style=" cursor:pointer;">去充值</a>
+    </div>
+</div>
+<div class="fuyue">
+    <div class="cozyPrompt">温馨提示</div>
+    <div class="promptFont">账户余额为负，暂无法提现</div>
+    <div class="Popup-bottom">
+        <a class="cancel Popup-half" style=" cursor:pointer;">取消</a>
+        <a class="goRecharge Popup-half" style=" cursor:pointer;">去充值</a>
+    </div>
+</div>
+<div class="dingDaning">
+    <div class="cozyPrompt">温馨提示</div>
+    <div class="promptFont">您有一笔订单尚未结束，暂无法提现</div>
+    <div class="Popup-bottom fontCenter zhiDao">
+        知道了
+    </div>
+</div>
+<div class="tiXianWrap">
+    <div class="Popup-top">确认要将押金提现吗？</div>
+    <div class="Popup-bottom">
+        <a class="queding Popup-half" style=" cursor:pointer;">确定</a>
+        <a class="quxiao Popup-half" style=" cursor:pointer;">取消</a>
+    </div>
+</div>
+<div class="Popup-bg"></div>
+<script src="js/jquery.min.js"></script>
+<!--<script src="js/amazeui.min.js"></script>-->
+<script src="js/app.js"></script>
+<script src="js/wallet.js"></script>
+</body>
+</html>

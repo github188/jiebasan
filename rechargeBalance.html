@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>充值余额</title>
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/flexible.js"></script>
+</head>
+<body>
+<header class="top bg-white">
+    <div class="header-center">
+        <a href="javascript:history.back(-1);" class="back"><img src="images/back2.png" alt=""  style="height: 20px;width: 12px;"></a>
+        <span class="top-title">充值余额</span>
+    </div>
+</header>
+<div class="bag-content wrap-center bg-white margin-top1">
+    <div class="my-balance">我的余额(元)</div>
+    <div class="balance-num margin0"></div>
+    <div class="warn margin0">注意：余额无法提现，请按需充值</div>
+</div>
+<div class="bg-white wrap-center interval">
+    <div class="title width90 ">充值金额</div>
+    <div class="border_top choose_money">
+        <div class="choose_wrap">
+            <div class="balance">充20元</div>
+            <div class="balance">充10元</div>
+            <div class="balance">充5元</div>
+            <div class="balance rechargeOther">其他</div>
+        </div>
+    </div>
+</div>
+<div class="bg-white wrap-center interval">
+    <div style="border-bottom: 1px solid #d6d6d6;">
+        <div class="title width90">选择支付方式</div>
+    </div>
+    <div class="border_tb zfBaoPay">
+        <div class="width90 relative">
+            <div style="display: inline-block;">
+                <img src="images/zhifubaosmall.png" alt="">
+            </div>
+            <span>支付宝</span>
+            <div class="checkedWrap chooseZfb checkedBg"></div>
+        </div>
+    </div>
+    <div class="wXinPay">
+        <div class="width90 relative">
+            <div style="display: inline-block;">
+                <img src="images/weixinsmall.png" alt="">
+            </div>
+            <span>微信</span>
+            <div class="checkedWrap chooseWx checkedBg"></div>
+        </div>
+    </div>
+</div>
+<div class="wrap-center center">
+    <button type="button" class="recharge-now rechargeYe">立即充值</button>
+</div>
+
+<div class="others_pop">
+    <div class="others_title">请输入充值金额</div>
+    <div class="closeIcon">×</div>
+    <input type="text" class="others_num" maxlength="4" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+    <div class="complete">完成</div>
+</div>
+<div class="popup"></div>
+<div class="Popup-bg"></div>
+<script src="js/jquery.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/pay.js"></script>
+<script src="js/wx.js"></script>
+</body>
+</html>

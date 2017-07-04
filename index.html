@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/flexible.js"></script>
+    <style>
+        /*.am-map{*/
+            /*height: 17rem;*/
+        /*}*/
+        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-size:12px;margin:0 auto;}
+        /*#userNow{*/
+            /*width: 100%;*/
+            /*height: 3.573333333rem;*/
+            /*background:rgba(0,0,0,0.5);*/
+            /*position: absolute;*/
+            /*top:1.2rem;*/
+            /*left: 0;*/
+            /*right: 0;*/
+        /*}*/
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=dYqNUS1pD5gGeliGxggEb0Vg1ghqm0Tp"></script>
+</head>
+<body>
+    <header class="top bg-white" style="position: fixed;left: 0;top:0;right: 0;">
+        <div class="header-center">
+            <a href="#doc-oc-demo1" data-am-offcanvas class="crumbs">
+                <img src="images/crumbs.png" alt="" style="width: 18px;height: 14px;">
+            </a>
+            <span class="top-title">借把伞</span>
+            <!--<a href="activity.html" class="am-icon-gift"></a>-->
+        </div>
+    </header>
+    <div style="height: 1.2rem;"></div>
+    <!--地图-->
+    <div id="allmap"></div>
+    <!--信息框-->
+    <div style="width:4.64rem;position: absolute;top:250px;left:50px;z-index: 100000;background: #fff;display: none;">
+        <div style="padding-top:7px;">
+            <span style="display: inline-block;vertical-align: middle; width:4px;height: 4px;background: #ff6d5b;border-radius: 100%;margin-left: 11px;margin-right: 5px;"></span>
+            <span>伞位数量40</span>
+        </div>
+        <div style="padding-bottom:7px;">
+            <span style="display: inline-block;vertical-align: middle; width:4px;height: 4px;background: #ff6d5b;border-radius: 100%;margin-left: 11px;margin-right: 5px;"></span>
+            <span>可用雨伞 <i style="color:#ff6d5b;font-style:normal;">12</i> 把</span>
+        </div>
+        <div style="border-top:1px solid #cecece;display: flex;">
+            <div style="flex: 55;border-right: 1px solid #cecece;line-height: 30px;"><div style="margin-left: 11px">张江高科地铁5号</div> </div>
+            <div style="flex: 30;color: #ff6d5b;line-height: 30px;"><div style="text-align: center;">去这里</div></div>
+        </div>
+    </div>
+
+
+    <!--正在使用-->
+    <div id="userNow" style="">
+        <div class="userNowWrap" style="">
+            <div class="userNowWrapCenter" style="">
+                <div class="userCenterLeft" style="">
+                    <div class="dingWei"><img src="images/dingweiicon.png" alt="">借伞点：<span class="dingWeiFont"></span></div>
+                    <div class="shiChang"><img src="images/timeicon.png" alt="" >已用时长：<span class="shiChangFont"></span></div>
+                    <div class="xiaoFei"><img src="images/usemoneyicon.png" alt="" >当前消费：<span class="xiaoFeiFont"></span></div>
+                    <div class="zhuYi"><img src="images/becareful.png" alt="">逾期30天未还伞,将被<span style="color: #FB796E;">扣除押金</span>,敬请谅解</div>
+                </div>
+                <div class="userCenterRight"><div class="rightCenter"><span class="rightFont">计费中</span></div></div>
+            </div>
+        </div>
+    </div>
+    <!--借伞按钮-->
+    <!--<div class="borrowBtn">借伞</div>-->
+    <div class="borrowIcon borrowBtn"><img src="images/jiesnaIcon.png" alt=""></div>
+    <!--跳转故障上报按钮-->
+    <div class="goFaultIcon"><img src="images/faulticon.png" alt=""></div>
+    <!--重新定位按钮-->
+    <div class="locationIcon"><img src="images/locationicon.png" alt=""></div>
+    <!--指南按钮-->
+    <div class="guideIcon"><a  href="useguide.html"><img src="images/guideIcon.png"></a></div>
+    <!--刷新按钮-->
+    <div class="refreshIcon"><img src="images/refreshImg.png" alt="" id="refreshImg"></div>
+    <!-- 侧边栏内容 -->
+    <div id="doc-oc-demo1" class="am-offcanvas">
+        <div class="am-offcanvas-bar">
+            <div class="am-offcanvas-content">
+                <div class="user-content">
+                    <div class="am-g flex">
+                        <div class="am-u-sm-8 user-info">
+                            <div class="user-head">
+                                <img src="images/head-small.png" alt="">
+                            </div>
+                            <div class="user-name"></div>
+                            <div class="user-phone">手机号：<span></span></div>
+                        </div>
+                        <div class="am-u-sm-4 revise-card flex">
+                            <div class="revise-container">
+                                <a href="javascript:">
+                                    <span class="adapt-wrap"><img src="images/adapt-card.png" alt=""></span><br>
+                                    <span class="revise-font">修改名片</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="register-wrap">
+                            <div class="register-head">
+                                <img src="images/head-big.png" alt="">
+                            </div>
+                            <a href="login.html"><div class="register-font">注册登录</div></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="white-line"></div>
+                <div class="user-list">
+                    <ul class="am-list">
+                        <li>
+                            <a href="javascript:" id="wallet">
+                                <img src="images/wallet.png" alt="">
+                                <span class="span-width"></span>
+                                我的钱包
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:" id="useRecord">
+                                <img src="images/record.png" alt="">
+                                <span class="span-width"></span>
+                                使用记录
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:" id="message">
+                                <img src="images/message.png" alt="">
+                                <span class="span-width"></span>
+                                我的消息
+                                <img class="messageMark" src='images/redPoint.png' alt='' style=" width: 8px;height: 8px;margin-top: -0.266666667rem;">
+                            </a>
+                        </li>
+                        <!--<li class="shareWrapper">-->
+                            <!--<a href="share.html" id="share">-->
+                                <!--<img src="images/invite-friends.png" alt="">-->
+                                <!--<span class="span-width"></span>-->
+                                <!--邀请好友-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <li>
+                            <a href="javascript:" id="useGuide">
+                                <img src="images/user-guide.png" alt="">
+                                <span class="span-width"></span>
+                                使用指南
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href="tel:400-0272700" id="customPhone" data-rel="close" class="doc-oc-js">
+                                <img src="images/custom.png" alt="">
+                                <span class="span-width"></span>
+                                客服电话
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:" id="setUp">
+                                <img src="images/set-up.png" alt="">
+                                <span class="span-width"></span>
+                                设置
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--<a href="setup.html">-->
+                <!--<div class="set-up">-->
+                    <!--<i class="am-icon-cog" style="font-size: 18px;color: #fff;"></i>-->
+                    <!--<span style="font-size: 16px;color: #fff;margin-left: 5%;">设置</span>-->
+                <!--</div>-->
+            <!--</a>-->
+        </div>
+    </div>
+    <div class="call-service">
+        <div class="call-phone">400-0272700</div>
+        <div class="am-g call-font">
+            <div class="am-u-sm-6 cancel-phone">取消</div>
+            <div class="am-u-sm-6 call-out" href=""><a href="tel:400-0272700" style="color:#0076ff;">呼叫</a></div>
+        </div>
+    </div>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function() {
+    var id = '#doc-oc-demo1';
+    var $myOc = $(id);
+    $('.doc-oc-js').on('click', function() {
+        $myOc.offCanvas($(this).data('rel'));
+    });
+    var ua = navigator.userAgent.toLowerCase();
+    if (/iphone|ipad|ipod/.test(ua)) {
+        $('#customPhone').attr('href','tel:400-0272700');
+    } else if (/android/.test(ua)) {
+        $('#customPhone').attr('href','javascript:');
+        $("#customPhone").click(function(){
+            $(".call-service").css("display","block");
+            $(".doc-oc-demo1").removeClass("am-active");
+        });
+    }
+});
+
+</script>
+<script src="js/jquery.rotate.min.js"></script>
+<script>$('body').height($(window).height());</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="js/map.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/wx.js"></script>
+</body>
+</html>
