@@ -122,11 +122,15 @@ textarea{
     border-bottom: 1px solid #d6d6d6;
 }
 .bottom-color{
-    box-sizing:border-box;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
     border-bottom: 2px solid #ff6d5b;
 }
 .border_tb{
-    box-sizing:border-box;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
     border-bottom:1px solid #d6d6d6;
     /*border-top:1px solid #d6d6d6;*/
 }
@@ -308,6 +312,8 @@ textarea{
     height: 1.68rem;
     line-height: 1.68rem;
     box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
     border-bottom: 1px solid #cecece;
     color: #030303;
     font-size: 16px;
@@ -322,6 +328,8 @@ textarea{
 }
 .cancel-phone{
     box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
     border-right: 1px solid #cecece;
 }
 .borrowBtn{
@@ -463,6 +471,8 @@ textarea{
     /*height: 6.416666667rem;*/
     /*line-height:6.416666667rem ;*/
     box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
     border-bottom: 1px solid #8a8d8d;
 }
 .phone-num{
@@ -813,6 +823,8 @@ textarea{
     height: 1.44rem;
     line-height: 1.44rem;
     box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
     border-bottom: 1px solid #cecece;
 }
 .Popup-bottom{
@@ -821,6 +833,8 @@ textarea{
     height: 1.12rem;
     line-height: 1.12rem;
     box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
     border-top:1px solid #cecece;
 }
 .Popup-half{
@@ -828,6 +842,8 @@ textarea{
     display: inline-block;
     width:48%;
     box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
     border-right:1px solid #cecece;
 }
 .Popup-half:last-child{
@@ -894,6 +910,8 @@ textarea{
 
     border:1px solid #d6d6d6;
     box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
     border-radius:6px;
     font-size: 14px;
     color: #000;
@@ -977,6 +995,8 @@ textarea{
     color:#282828;
     text-align:center;
     box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
 }
 .tab-bar span:first-child{
     position: absolute;
@@ -1165,6 +1185,8 @@ textarea{
     color:#282828;
     text-align:center;
     box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
     border-top:1px solid #d6d6d6;
     margin-top: 0.426666667rem;
 }
@@ -1180,6 +1202,8 @@ textarea{
 .shareimg-wrap{
     text-align: center;
     box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
     border-bottom:1px solid #d6d6d6;
 }
 
@@ -1252,6 +1276,8 @@ textarea{
 }
 .charge-content{
     box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
     border:1px dashed #cfcfcf;
     border-radius:4px;
     font-size:12px;
@@ -1505,6 +1531,8 @@ textarea{
     background: #ff6d5b;
     color: #fff;
     box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
     border:1px solid #ff6d5b;
 }
 .call-out{
@@ -1589,6 +1617,8 @@ textarea{
     width: 20px;
     height: 20px;
     box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
     border-radius: 100%;
     border:1px solid #ff6d5b;
     display: inline-block;
@@ -1687,6 +1717,8 @@ textarea{
     width: 0.32rem;
     height: 0.32rem;
     box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
     border:1px solid #b5b8b7;
     display: inline-block;
     vertical-align: middle;
