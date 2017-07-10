@@ -423,7 +423,6 @@ $(function(){
                     $(".goExpireCoupon").before($("<div class='coupon-content'><div class='coupon-title'>"+obj.usage_days+"天使用券</div><div class='coupon-des'><div class='des1'>"+obj.title+"</div><div class='des2'></div><div class='validity-time'>有效期:"+valid_from+"～"+valid_to+"</div></div></div>"))
                 });
             }
-
         },
         error:function(res){
             //console.log(res);
@@ -444,7 +443,9 @@ $(function(){
         success:function(res){
             //console.log(res);
             //console.log(res.body[0]);
-            $(".couponInfoWrap").append($("<div style='margin:0.2rem 0 0 0;'>"+res.body[0].answer+"</div>"));
+            $.each(res.body,function(ind,obj){
+                $(".couponInfoWrap").append($("<div style='margin:0.2rem 0 0 0;font-size: 16px;'>"+obj.question+"</div><div style='margin:0.2rem 0 0 0;font-size: 14px;'>"+obj.answer+"</div>"));
+            });
         },
         error:function(res){
             //console.log(res);
@@ -695,9 +696,12 @@ $(function(){
         contentType: "application/json",
         dataType: "json",
         success:function(res){
-            //console.log(res.body[0].answer);
-            $(".abnormalInfo").append($("<div style='margin:0.2rem 0 0 0;'>"+res.body[0].answer+"</div>"));
-
+            //console.log(res.body);
+            $.each(res.body,function(ind,obj){
+                //console.log(obj.question);
+                //console.log(obj.answer);
+                $(".abnormalInfo").append($("<div style='margin:0.2rem 0 0 0;font-size: 16px;font-weight: 600;'>"+obj.question+"</div><div style='margin:0.2rem 0 0 0;font-size: 14px;'>"+obj.answer+"</div>"));
+            });
         },
         error:function(res){
 
@@ -709,7 +713,7 @@ $(function(){
         url:"http://staging.jiebasan.com/exception_declarations/charging" ,
         method:"GET",
         headers:{
-            "Accept": "application/json",
+            "Accept": "application/json"
         },
         contentType: "application/json",
         dataType: "json",

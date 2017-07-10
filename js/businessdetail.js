@@ -14,7 +14,7 @@ $(function(){
         dataType: "json",
         data: {"page":"","count":""},
         success:function(res){
-            console.log(res);
+            //console.log(res);
             if(res.body.length == 0){
                 $(".no-more").css("display","none");
                 $(".consumption-wrap").removeClass("bg-white");
@@ -74,7 +74,7 @@ $(function(){
             dataType: "json",
             data: {"page":"","count":""},
             success:function(res){
-                console.log(res);
+                //console.log(res);
                 if(res.body.length == 0){
                     $(".no-more").css("display","none");
                     $(".consumption-wrap").removeClass("bg-white");
