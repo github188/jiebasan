@@ -704,10 +704,9 @@ $(function(){
             });
         },
         error:function(res){
-
+            console.log(res);
         }
     });
-
     //计费说明
     $.ajax({
         url:"http://staging.jiebasan.com/exception_declarations/charging" ,
