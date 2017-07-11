@@ -203,8 +203,8 @@ $(function(){
                     window.localStorage.token = res.body.jwt_token;
                     window.localStorage.access_token = res.body.access_token;
                     window.localStorage.invitation_code = res.body.invitation_code;//邀请码
-                    window.localStorage.balance_normal = res.body.balance_normal;
-                    window.localStorage.balance_pledge = res.body.balance_pledge;
+                    window.sessionStorage.balance_normal = res.body.balance_normal;
+                    window.sessionStorage.balance_pledge = res.body.balance_pledge;
                     location.href = "index.html";
                 },
                 error:function(res){
@@ -345,6 +345,8 @@ $(function(){
             window.localStorage.balanceNormal = res.body.balance_normal;
             window.localStorage.pledgeAmount = res.body.pledge_amount;
             window.localStorage.have_unread_messages = res.body.have_unread_messages;
+            window.sessionStorage.balance_pledge = res.body.balance_pledge;
+            window.sessionStorage.balance_normal = res.body.balance_normal;
             $(".recharge-num").text(res.body.pledge_amount);
             $(".balance-num").text(res.body.balance_normal);
             if(res.body.balance_pledge<=0.0){
