@@ -67,10 +67,10 @@ $(function(){
     });
     $(".Popup-bg").click(function(){
         $(".others_pop").css("display","none");
-        $(".Popup-bg").css("display","none");
+        //$(".Popup-bg").css("display","none");
         $(".rechargeOther").addClass("borderRed");
         $(".dingDaning").css("display","none");
-        $(".tiXianWrap").css("display","none");
+        //$(".tiXianWrap").css("display","none");
         //$(".others_pop").css("top","6.933333rem");
     });
     $(".closeIcon").click(function(){
@@ -388,9 +388,9 @@ $(function(){
         window.location.href = "coupon.html";
     });
     //提现
-    $(".withdraw_cash").click(function(){
-
-    });
+    //$(".withdraw_cash").click(function(){
+    //
+    //});
     //获取可用优惠券数据
     $.ajax({
         url:"http://staging.jiebasan.com/coupons" ,
@@ -801,13 +801,13 @@ $(function(){
         });
     });
     $(".yajin").text( window.localStorage.balance_pledge);
-    if(window.localStorage.balance_pledge >0){
-        $(".withdraw_cash").attr("disabled",false);
-        //$(".withdraw_cash").css("background-color","#ffffff");
-    }else{
-        $(".withdraw_cash").attr("disabled",true);
-        //$(".withdraw_cash").css("background-color","gray");
-    }
+    //if(window.localStorage.balance_pledge >0){
+    //    $(".withdraw_cash").attr("disabled",false);
+    //    //$(".withdraw_cash").css("background-color","#ffffff");
+    //}else{
+    //    $(".withdraw_cash").attr("disabled",true);
+    //    //$(".withdraw_cash").css("background-color","gray");
+    //}
     //点击借伞
 //    $(".borrowBtn").click(function(){
 //        if(window.localStorage.token == undefined){

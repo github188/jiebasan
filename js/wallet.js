@@ -4,8 +4,15 @@
 //提现
 $(function(){
     $(".withdraw_cash").click(function(){
-        $(".tiXianWrap").css("display","block");
-        $(".Popup-bg").css("display","block");
+        if(window.localStorage.balance_pledge >0){
+            $(".withdraw_cash").attr("disabled",false);
+            $(".tiXianWrap").css("display","block");
+            $(".Popup-bg").css("display","block");
+            //$(".withdraw_cash").css("background-color","#ffffff");
+        }else{
+            $(".withdraw_cash").removeAttr('onclick');
+            //$(".withdraw_cash").css("background-color","gray");
+        }
     });
     $(".quxiao").click(function(){
         $(".tiXianWrap").css("display","none");

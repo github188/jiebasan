@@ -661,9 +661,13 @@ textarea{
     border-radius:8px;
     width: 8.853333333rem;
     height: 1.013333333rem;
+    line-height: 1.013333333rem;
     font-size:18px;
     color:#282828;
     border: none;
+    display: block;
+    margin: 0 auto;
+    text-decoration: none;
 }
 /*修改名片*/
 .save-revise{
