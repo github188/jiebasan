@@ -135,7 +135,7 @@ $(function(){
                             }else{
                                 onBridgeReady();
                             }
-                            window.history.go(-1);
+                            window.history.back(-1);
                         }
                     },
                     error:function(res){

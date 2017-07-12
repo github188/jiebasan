@@ -85,7 +85,7 @@ $(function(){
                     //alert(res);
                     $(".popup").show();
                     $(".popup").text("提现成功");
-                    setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',1500);
+                    setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.back(-1)',1500);
                 },
                 error:function(res){
                     //console.log(res);

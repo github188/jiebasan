@@ -520,7 +520,6 @@ $(function(){
                     $(".popup").text("感谢您的意见");
                     setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',1500);
                     //setTimeout(window.history.go(-1),5500)
-
                     //location.href = "index.html";
                 },
                 error:function(res){
@@ -629,7 +628,6 @@ $(function(){
             //console.log(res);
         }
     });
-
     //使用指南(借伞说明, 还伞说明)
     $.ajax({
         url:"http://staging.jiebasan.com/instructions" ,
