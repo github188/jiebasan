@@ -105,6 +105,30 @@ $(function(){
             //获取URL后的伞桩id
             var url = window.location.search;
             var deviceId = url.split("=")[1];
+            function getProfile(){
+                $.ajax({
+                    url:"http://staging.jiebasan.com/users/profile" ,
+                    method:"GET",
+                    headers:{
+                        "Accept": "application/json",
+                        "Authorization":window.localStorage.token
+                    },
+                    contentType: "application/json",
+                    dataType: "json",
+                    //data: JSON.stringify({"name":$(".nickname").val()}),
+                    success:function(res){
+                        //console.log(res);
+                        //window.localStorage.pledgeAmount = res.body.pledge_amount;
+                        //window.localStorage.have_unread_messages = res.body.have_unread_messages;
+                        window.sessionStorage.balance_pledge = res.body.balance_pledge;
+                        window.sessionStorage.balance_normal = res.body.balance_normal;
+                    },
+                    error:function(res){
+                        //console.log(res);
+                    }
+                });
+            }
+            getProfile();
             //点击借伞
             $(".borrowBtn").click(function(){
                 if(window.localStorage.token == undefined){
