@@ -3,8 +3,9 @@
  */
 //提现
 $(function(){
+    $(".myDeposit").val("￥"+window.sessionStorage.balance_pledge)
     $(".withdraw_cash").click(function(){
-        if(window.localStorage.balance_pledge >0){
+        if(window.sessionStorage.balance_pledge >0){
             $(".withdraw_cash").attr("disabled",false);
             $(".tiXianWrap").css("display","block");
             $(".Popup-bg").css("display","block");
@@ -21,7 +22,7 @@ $(function(){
     $(".queding").click(function(){
         $(".tiXianWrap").css("display","none");
         $(".Popup-bg").css("display","none");
-        if(window.localStorage.balanceNormal<0){
+        if(window.sessionStorage.balance_normal<0){
             $(".fuyue").css("display","block");
             $(".Popup-bg").css("display","block");
             $(".goRecharge").click(function(){
@@ -29,7 +30,7 @@ $(function(){
                 $(".Popup-bg").css("display","none");
                 window.location.href = "rechargeDeposit.html";
             });
-        }else if(window.localStorage.billing == "billing"){
+        }else if(window.sessionStorage.billing == "billing"){
             $(".dingDaning").css("display","block");
             $(".Popup-bg").css("display","block");
             $(".zhiDao").click(function(){

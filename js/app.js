@@ -302,7 +302,7 @@ $(function(){
             //console.log("正在使用");
             //console.log(res.body);
             //$.each(res.body,function(ind,obj){
-            window.localStorage.billing = res.body.state;
+            window.sessionStorage.billing = res.body.state;
             var usedTime = "使用时长";
             if(res.body.state == "billing"){
                 //console.log(res.body)
@@ -328,44 +328,14 @@ $(function(){
             //$(".userRecord-wrap").append($("<div class='center'style='margin-top: 1rem;'>暂无使用记录</div>"));
         }
     });
-    //我的钱包
-    $.ajax({
-        url:"http://staging.jiebasan.com/users/profile" ,
-        method:"GET",
-        headers:{
-            "Accept": "application/json",
-            "Authorization":window.localStorage.token
-        },
-        contentType: "application/json",
-        dataType: "json",
-        //data: JSON.stringify({"name":$(".nickname").val()}),
-        success:function(res){
-            //console.log(res);
-            window.localStorage.balancePledge = res.body.balance_pledge;
-            window.localStorage.balanceNormal = res.body.balance_normal;
-            window.localStorage.pledgeAmount = res.body.pledge_amount;
-            window.localStorage.have_unread_messages = res.body.have_unread_messages;
-            window.sessionStorage.balance_pledge = res.body.balance_pledge;
-            window.sessionStorage.balance_normal = res.body.balance_normal;
-            $(".recharge-num").text(res.body.pledge_amount);
-            $(".balance-num").text(res.body.balance_normal);
-            if(res.body.balance_pledge<=0.0){
-                $(".myDeposit").css({'fontSize':'14px','color':'#ff6d5b'}).val("￥0.00").attr("disabled","false");
-            }else{
-                $(".myDeposit").val("￥"+res.body.balance_pledge);
-            }
-        },
-        error:function(res){
-            //console.log(res);
-        }
-    });
+
     //查看交易明细
     $("#details").click(function(){
         window.location.href = "transaction.html";
     });
     //点击充值
     $(".recharge").click(function(){
-        if(window.localStorage.balancePledge <= 0.0){
+        if(window.sessionStorage.balance_pledge <= 0.0){
             $(".quitPopup").css("display","block");
             $(".Popup-bg").css("display","block");
             $(".goRecharge").click(function(){
@@ -373,7 +343,7 @@ $(function(){
                 $(".Popup-bg").css("display","none");
                 window.location.href = "rechargeDeposit.html";
             });
-        }else if(window.localStorage.balanceNormal <0.0){
+        }else if(window.sessionStorage.balance_normal <0.0){
             //$(".quitPopup").css("display","block");
             //$(".Popup-top").text("您的余额不足");
             //$(".Popup-bg").css("display","block");
@@ -802,42 +772,34 @@ $(function(){
             }
         });
     });
-    $(".yajin").text( window.localStorage.balance_pledge);
-    //if(window.localStorage.balance_pledge >0){
-    //    $(".withdraw_cash").attr("disabled",false);
-    //    //$(".withdraw_cash").css("background-color","#ffffff");
-    //}else{
-    //    $(".withdraw_cash").attr("disabled",true);
-    //    //$(".withdraw_cash").css("background-color","gray");
-    //}
-    //点击借伞
-//    $(".borrowBtn").click(function(){
-//        if(window.localStorage.token == undefined){
-//            window.location.href = "login.html";
-//        }
-//        if(window.localStorage.balancePledge <=0){
-//            window.location.href = "rechargeDeposit.html";
-//        }else if(window.localStorage.balanceNormal <0){
-//            window.location.href = "rechargeBalance.html";
-//        }else {
-//            $.ajax({
-//                url: "http://staging.jiebasan.com/borrowing_requests",
-//                method: "POST",
-//                headers: {
-//                    "Accept": "application/json",
-//                    "Authorization":window.localStorage.token
-//                },
-//                contentType: "application/json",
-//                dataType: "json",
-//                //data:JSON.stringify({}),
-//                success:function(res){
-//                    console.log(res);
-//                },
-//                error:function(res){
-//                    console.log(res);
-//                }
-//            });
-//        }
-//    });
-//
+    //我的钱包
+    $.ajax({
+        url:"http://staging.jiebasan.com/users/profile" ,
+        method:"GET",
+        headers:{
+            "Accept": "application/json",
+            "Authorization":window.localStorage.token
+        },
+        contentType: "application/json",
+        dataType: "json",
+        //data: JSON.stringify({"name":$(".nickname").val()}),
+        success:function(res){
+            //console.log(res);
+            window.localStorage.pledgeAmount = res.body.pledge_amount;
+            window.localStorage.have_unread_messages = res.body.have_unread_messages;
+            window.sessionStorage.balance_pledge = res.body.balance_pledge;
+            window.sessionStorage.balance_normal = res.body.balance_normal;
+            $(".recharge-num").text(res.body.pledge_amount);
+            $(".balance-num").text(res.body.balance_normal);
+            if(res.body.balance_pledge<=0.0){
+                $(".myDeposit").css({'fontSize':'14px','color':'#ff6d5b'}).val("￥0.00").attr("disabled","false");
+            }else{
+                $(".myDeposit").val("￥"+res.body.balance_pledge);
+            }
+        },
+        error:function(res){
+            //console.log(res);
+        }
+    });
+    $(".yajin").text( window.localStorage.pledgeAmount);
 });

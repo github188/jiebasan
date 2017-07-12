@@ -44,9 +44,9 @@ $(function(){
             $(".borrowIcon").click(function(){
                 if(window.localStorage.token == undefined){
                     window.location.href = "login.html";
-                }else if(window.localStorage.balancePledge <=0){
+                }else if(window.sessionStorage.balance_pledge <=0){
                     window.location.href = "rechargeDeposit.html";
-                }else if(window.localStorage.balanceNormal <0){
+                }else if(window.sessionStorage.balance_normal <0){
                     window.location.href = "rechargeBalance.html";
                 }else {
                     wx.checkJsApi({
@@ -109,9 +109,9 @@ $(function(){
             $(".borrowBtn").click(function(){
                 if(window.localStorage.token == undefined){
                     window.location.href = "login.html";
-                }else if(window.localStorage.balancePledge <=0){
+                }else if(window.sessionStorage.balance_pledge <=0){
                     window.location.href = "rechargeDeposit.html";
-                }else if(window.localStorage.balanceNormal <0){
+                }else if(window.sessionStorage.balance_normal <0){
                     window.location.href = "rechargeBalance.html";
                 }else {
                     $.ajax({
