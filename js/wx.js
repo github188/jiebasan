@@ -67,8 +67,8 @@ $(function(){
                                 //alert("result.resultStr:"+result.resultStr);
                                 var urlStr = JSON.stringify(result.resultStr);
                                 var deviceId = urlStr.split("=")[1];//获取伞桩id
-                                //alert("urlStr:"+urlStr);
-                                //alert(deviceId);
+                                alert("urlStr:"+urlStr);
+                                alert(deviceId);
                                 $.ajax({
                                     url: "http://staging.jiebasan.com/borrowing_requests",
                                     method: "POST",
@@ -82,8 +82,8 @@ $(function(){
                                     success:function(res){
                                         //alert(121212);
                                         //console.log(res);
-                                        //alert("res:"+res);
-                                        //alert(res.body.id);
+                                        alert("res:"+res);
+                                        alert(res.body.id);
                                         window.sessionStorage.id = res.body.id;
                                         window.location.href = "jiesan.html";
                                     },

@@ -135,7 +135,7 @@ $(function(){
                             }else{
                                 onBridgeReady();
                             }
-                            window.history.back(-1);
+                            window.location.replace("https://www.jiebasan.com/webapp");
                         }
                     },
                     error:function(res){
