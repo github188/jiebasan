@@ -13,6 +13,7 @@ function judgeState(){
         data:{"borrowing_request_id":window.sessionStorage.id},
         success:function(res){
             console.log(res);
+            alert(JSON.stringify(res));
             if(res.body.state == "true"){
                 window.location.href = "jiesanSuccess.html";
             }
@@ -26,6 +27,7 @@ function judgeState(){
             //window.location.href = "jiesanSuccess.html";
         },
         error:function(res){
+            alert(JSON.stringify(res));
             console.log(res);
             $(".popup").show();
             $(".popup").text(res.meta.message);
