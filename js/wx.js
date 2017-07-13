@@ -79,12 +79,12 @@ $(function(){
                                     contentType: "application/json",
                                     dataType: "json",
                                     data:JSON.stringify({"dock_device_id": deviceId}),
-                                    success:function(res){
+                                    success:function(result){
                                         //alert(121212);
                                         //console.log(res);
-                                        alert("res:"+res);
-                                        alert(res.body.id);
-                                        window.sessionStorage.id = res.body.id;
+                                        alert("res:"+JSON.stringify(result));
+                                        alert(result.body.id);
+                                        window.sessionStorage.id = result.body.id;
                                         window.location.href = "jiesan.html";
                                     },
                                     error:function(res){
