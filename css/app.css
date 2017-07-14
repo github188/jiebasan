@@ -1808,3 +1808,19 @@ textarea{
     color: #ff6d5b;
     text-decoration: none;
 }
+.rechargeSuccessWrap{
+    margin-top:1rem;
+}
+.successImg{
+    text-align: center;
+}
+.successImg img{
+    width: 96px;
+    height: 72px;
+}
+.rechargeSuccessFont{
+    text-align: center;
+    font-size:12px ;
+    padding-top:0.4rem;
+    color: #959595;
+}

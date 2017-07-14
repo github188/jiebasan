@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2a4647a-f311-44e7-a320-448704e9c055" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/rechargeSuccess.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/app.css" afterPath="$PROJECT_DIR$/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/faultReport.html" afterPath="$PROJECT_DIR$/faultReport.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jiesan.html" afterPath="$PROJECT_DIR$/jiesan.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/judgestate.js" afterPath="$PROJECT_DIR$/js/judgestate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/pay.js" afterPath="$PROJECT_DIR$/js/pay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/wx.js" afterPath="$PROJECT_DIR$/js/wx.js" />
     </list>
     <ignored path="sharedumbrella.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +32,8 @@
       <file leaf-file-name="bag.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bag.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+            <state vertical-scroll-proportion="-11.392858">
+              <caret line="61" column="28" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -40,27 +41,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1071026">
-              <caret line="766" column="15" selection-start-line="766" selection-start-column="15" selection-end-line="766" selection-end-column="15" />
+            <state vertical-scroll-proportion="-30.1">
+              <caret line="356" column="53" selection-start-line="356" selection-start-column="53" selection-end-line="356" selection-end-column="53" />
               <folding>
-                <marker date="1499998989638" expanded="true" signature="13162:13179" placeholder="..." />
-                <marker date="1499998989638" expanded="true" signature="16628:16664" placeholder="..." />
-                <marker date="1499998989638" expanded="true" signature="16700:16736" placeholder="..." />
-                <marker date="1499998989638" expanded="true" signature="21555:21574" placeholder="..." />
-                <marker date="1499998989638" expanded="true" signature="21648:21667" placeholder="..." />
-                <marker date="1499998989638" expanded="true" signature="24659:24676" placeholder="..." />
-                <marker date="1499998989638" expanded="true" signature="25257:25276" placeholder="..." />
-                <marker date="1499998989638" expanded="true" signature="28774:28794" placeholder="..." />
-                <marker date="1499998989638" expanded="true" signature="28774:28810" placeholder="..." />
-                <marker date="1499998989638" expanded="true" signature="28774:28827" placeholder="..." />
-                <marker date="1499998989638" expanded="true" signature="28863:28883" placeholder="..." />
-                <marker date="1499998989638" expanded="true" signature="28863:28899" placeholder="..." />
-                <marker date="1499998989638" expanded="true" signature="29566:29620" placeholder="..." />
-                <marker date="1499998989638" expanded="true" signature="29566:29684" placeholder="..." />
+                <marker date="1500019557313" expanded="true" signature="13162:13179" placeholder="..." />
+                <marker date="1500019557313" expanded="true" signature="16790:16826" placeholder="..." />
+                <marker date="1500019557313" expanded="true" signature="16862:16898" placeholder="..." />
+                <marker date="1500019557313" expanded="true" signature="21717:21736" placeholder="..." />
+                <marker date="1500019557313" expanded="true" signature="21810:21829" placeholder="..." />
+                <marker date="1500019557313" expanded="true" signature="24821:24838" placeholder="..." />
+                <marker date="1500019557313" expanded="true" signature="25419:25438" placeholder="..." />
+                <marker date="1500019557313" expanded="true" signature="28936:28956" placeholder="..." />
+                <marker date="1500019557313" expanded="true" signature="28936:28972" placeholder="..." />
+                <marker date="1500019557313" expanded="true" signature="28936:28989" placeholder="..." />
+                <marker date="1500019557313" expanded="true" signature="29025:29045" placeholder="..." />
+                <marker date="1500019557313" expanded="true" signature="29025:29061" placeholder="..." />
+                <marker date="1500019557313" expanded="true" signature="29728:29782" placeholder="..." />
+                <marker date="1500019557313" expanded="true" signature="29728:29846" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rechargeDeposit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rechargeDeposit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.0">
+              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,8 +79,8 @@
       <file leaf-file-name="pay.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/pay.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="137" column="84" selection-start-line="137" selection-start-column="84" selection-end-line="137" selection-end-column="84" />
+            <state vertical-scroll-proportion="-6.3333335">
+              <caret line="10" column="49" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -78,58 +89,28 @@
       <file leaf-file-name="wx.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/wx.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.233333">
-              <caret line="46" column="73" selection-start-line="46" selection-start-column="73" selection-end-line="46" selection-end-column="73" />
+            <state vertical-scroll-proportion="-103.86667">
+              <caret line="164" column="56" selection-start-line="164" selection-start-column="56" selection-end-line="164" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="faultReport.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/faultReport.html">
+      <file leaf-file-name="rechargesuccess.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rechargesuccess.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.571428">
-              <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+            <state vertical-scroll-proportion="-8.142858">
+              <caret line="12" column="54" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jiesan.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jiesan.html">
+      <file leaf-file-name="rechargeSuccess.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/rechargeSuccess.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.428572">
-              <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rechargeBalance.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rechargeBalance.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="90" selection-start-line="51" selection-start-column="90" selection-end-line="51" selection-end-column="90" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rechargeDeposit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rechargeDeposit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="36" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="judgestate.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/judgestate.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.14503817">
+              <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -138,8 +119,28 @@
       <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.844828">
-              <caret line="1808" column="26" selection-start-line="1808" selection-start-column="26" selection-end-line="1808" selection-end-column="26" />
+            <state vertical-scroll-proportion="-18.857143">
+              <caret line="1811" column="16" selection-start-line="1811" selection-start-column="16" selection-end-line="1811" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jiesanSuccess.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jiesanSuccess.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.0">
+              <caret line="28" column="43" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.107143">
+              <caret line="14" column="109" selection-start-line="14" selection-start-column="109" selection-end-line="14" selection-end-column="109" />
               <folding />
             </state>
           </provider>
@@ -150,8 +151,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -191,13 +192,15 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/bag.html" />
         <option value="$PROJECT_DIR$/js/wallet.js" />
-        <option value="$PROJECT_DIR$/js/pay.js" />
         <option value="$PROJECT_DIR$/rechargeDeposit.html" />
-        <option value="$PROJECT_DIR$/js/wx.js" />
-        <option value="$PROJECT_DIR$/js/judgestate.js" />
         <option value="$PROJECT_DIR$/jiesan.html" />
-        <option value="$PROJECT_DIR$/css/app.css" />
         <option value="$PROJECT_DIR$/faultReport.html" />
+        <option value="$PROJECT_DIR$/js/judgestate.js" />
+        <option value="$PROJECT_DIR$/css/app.css" />
+        <option value="$PROJECT_DIR$/rechargesuccess.html" />
+        <option value="$PROJECT_DIR$/js/wx.js" />
+        <option value="$PROJECT_DIR$/js/rechargeSuccess.js" />
+        <option value="$PROJECT_DIR$/js/pay.js" />
         <option value="$PROJECT_DIR$/js/app.js" />
       </list>
     </option>
@@ -238,6 +241,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -270,24 +275,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sharedumbrella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jiebasan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,14 +287,14 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\xampp\htdocs\sharedumbrella\css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\xampp\htdocs\jiebasan\images" />
       <recent name="D:\xampp\htdocs\sharedumbrella\images" />
       <recent name="D:\xampp\htdocs\sharedumbrella\js" />
       <recent name="D:\xampp\htdocs\sharedumbrella" />
+      <recent name="D:\xampp\htdocs\sharedumbrella\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\xampp\htdocs\sharedumbrella\css" />
     </key>
   </component>
@@ -412,20 +401,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="50" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/activity.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -549,20 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feedback.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="127" selection-start-line="10" selection-start-column="127" selection-end-line="10" selection-end-column="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/introcoupon.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="127" selection-start-line="10" selection-start-column="127" selection-end-line="10" selection-end-column="127" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -607,13 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/useguide.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2413793">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/transaction.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.051724">
@@ -649,32 +603,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/overdueCoupon.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.25862068">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18965517">
-          <caret line="10" column="127" selection-start-line="10" selection-start-column="127" selection-end-line="10" selection-end-column="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jiesanSuccess.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.172414">
-          <caret line="28" column="43" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="24" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -682,15 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="8" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -698,25 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="87" column="128" selection-start-line="87" selection-start-column="97" selection-end-line="87" selection-end-column="128" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/pay.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="137" column="84" selection-start-line="137" selection-start-column="84" selection-end-line="137" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bag.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -728,41 +632,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rechargeDeposit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/wx.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.233333">
-          <caret line="46" column="73" selection-start-line="46" selection-start-column="73" selection-end-line="46" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/judgestate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.844828">
-          <caret line="1808" column="26" selection-start-line="1808" selection-start-column="26" selection-end-line="1808" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jiesan.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.428572">
+        <state vertical-scroll-proportion="0.0">
           <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
           <folding />
         </state>
@@ -770,32 +642,154 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/faultReport.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.571428">
-          <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+        <state vertical-scroll-proportion="-3.392857">
+          <caret line="5" column="57" selection-start-line="4" selection-start-column="3" selection-end-line="5" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/judgestate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/useguide.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21934758">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/overdueCoupon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.048368953">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feedback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21372329">
+          <caret line="10" column="127" selection-start-line="10" selection-start-column="127" selection-end-line="10" selection-end-column="127" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/introcoupon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21372329">
+          <caret line="10" column="127" selection-start-line="10" selection-start-column="127" selection-end-line="10" selection-end-column="127" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.928572">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.107143">
+          <caret line="14" column="109" selection-start-line="14" selection-start-column="109" selection-end-line="14" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.857143">
+          <caret line="1811" column="16" selection-start-line="1811" selection-start-column="16" selection-end-line="1811" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rechargeDeposit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.0">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.392858">
+          <caret line="61" column="28" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jiesanSuccess.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.0">
+          <caret line="28" column="43" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rechargesuccess.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.142858">
+          <caret line="12" column="54" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/wx.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-103.86667">
+          <caret line="164" column="56" selection-start-line="164" selection-start-column="56" selection-end-line="164" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.3333335">
+          <caret line="10" column="49" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1071026">
-          <caret line="766" column="15" selection-start-line="766" selection-start-column="15" selection-end-line="766" selection-end-column="15" />
+        <state vertical-scroll-proportion="-30.1">
+          <caret line="356" column="53" selection-start-line="356" selection-start-column="53" selection-end-line="356" selection-end-column="53" />
           <folding>
-            <marker date="1499998989638" expanded="true" signature="13162:13179" placeholder="..." />
-            <marker date="1499998989638" expanded="true" signature="16628:16664" placeholder="..." />
-            <marker date="1499998989638" expanded="true" signature="16700:16736" placeholder="..." />
-            <marker date="1499998989638" expanded="true" signature="21555:21574" placeholder="..." />
-            <marker date="1499998989638" expanded="true" signature="21648:21667" placeholder="..." />
-            <marker date="1499998989638" expanded="true" signature="24659:24676" placeholder="..." />
-            <marker date="1499998989638" expanded="true" signature="25257:25276" placeholder="..." />
-            <marker date="1499998989638" expanded="true" signature="28774:28794" placeholder="..." />
-            <marker date="1499998989638" expanded="true" signature="28774:28810" placeholder="..." />
-            <marker date="1499998989638" expanded="true" signature="28774:28827" placeholder="..." />
-            <marker date="1499998989638" expanded="true" signature="28863:28883" placeholder="..." />
-            <marker date="1499998989638" expanded="true" signature="28863:28899" placeholder="..." />
-            <marker date="1499998989638" expanded="true" signature="29566:29620" placeholder="..." />
-            <marker date="1499998989638" expanded="true" signature="29566:29684" placeholder="..." />
+            <marker date="1500019557313" expanded="true" signature="13162:13179" placeholder="..." />
+            <marker date="1500019557313" expanded="true" signature="16790:16826" placeholder="..." />
+            <marker date="1500019557313" expanded="true" signature="16862:16898" placeholder="..." />
+            <marker date="1500019557313" expanded="true" signature="21717:21736" placeholder="..." />
+            <marker date="1500019557313" expanded="true" signature="21810:21829" placeholder="..." />
+            <marker date="1500019557313" expanded="true" signature="24821:24838" placeholder="..." />
+            <marker date="1500019557313" expanded="true" signature="25419:25438" placeholder="..." />
+            <marker date="1500019557313" expanded="true" signature="28936:28956" placeholder="..." />
+            <marker date="1500019557313" expanded="true" signature="28936:28972" placeholder="..." />
+            <marker date="1500019557313" expanded="true" signature="28936:28989" placeholder="..." />
+            <marker date="1500019557313" expanded="true" signature="29025:29045" placeholder="..." />
+            <marker date="1500019557313" expanded="true" signature="29025:29061" placeholder="..." />
+            <marker date="1500019557313" expanded="true" signature="29728:29782" placeholder="..." />
+            <marker date="1500019557313" expanded="true" signature="29728:29846" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/rechargeSuccess.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14503817">
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>

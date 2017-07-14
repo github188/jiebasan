@@ -8,6 +8,7 @@ $(function(){
         if(ua.match(/MicroMessenger/i)=="micromessenger") {//微信里
             //充余额
             $(".rechargeYe").click(function(){
+                window.sessionStorage.rechargeBtn = "rechargeYe";
                 //alert("充余额");
                 if($(".balance").hasClass("borderRed")){
                     if($('.checkedWrap').hasClass("checkedBg")){
@@ -62,6 +63,7 @@ $(function(){
                                     }else{
                                         onBridgeReady();
                                     }
+                                    window.location.href = "rechargesuccess.html";
                                 }
                                 //alert(res);
                             },
@@ -84,7 +86,7 @@ $(function(){
             });
             //充押金
             $(".rechargeYj").click(function(){
-                //console.log(111);
+                window.sessionStorage.rechargeBtn = "rechargeYj";
                 //alert("充押金");
                 $.ajax({
                     url: "http://staging.jiebasan.com/deposit_trades/pledge",//创建余额充值交易单
@@ -135,7 +137,7 @@ $(function(){
                             }else{
                                 onBridgeReady();
                             }
-                            window.location.replace("https://www.jiebasan.com/webapp");
+                            window.location.href = "rechargesuccess.html";
                         }
                     },
                     error:function(res){

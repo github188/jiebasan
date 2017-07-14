@@ -162,6 +162,7 @@ $(function(){
             getProfile();
             //点击借伞
             $(".borrowBtn").click(function(){
+                window.sessionStorage.btnMark = "index";
                 if(window.localStorage.token == undefined){
                     window.location.href = "login.html";
                 }else if(window.sessionStorage.balance_pledge <=0){

@@ -339,6 +339,7 @@ $(function(){
             $(".quitPopup").css("display","block");
             $(".Popup-bg").css("display","block");
             $(".goRecharge").click(function(){
+                window.sessionStorage.btnMark = "wallet";
                 $(".quitPopup").css("display","none");
                 $(".Popup-bg").css("display","none");
                 window.location.href = "rechargeDeposit.html";
@@ -348,10 +349,12 @@ $(function(){
             //$(".Popup-top").text("您的余额不足");
             //$(".Popup-bg").css("display","block");
             //$(".goRecharge").click(function(){
-                window.location.href = "rechargeBalance.html";
+            window.sessionStorage.btnMark = "wallet";
+            window.location.href = "rechargeBalance.html";
             //});
         }
         else{
+            window.sessionStorage.btnMark = "wallet";
             window.location.href = "rechargeBalance.html";
         }
     });
