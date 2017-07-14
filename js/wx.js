@@ -42,6 +42,37 @@ $(function(){
                 }
             });
             $(".borrowIcon").click(function(){
+                function getProfile(){
+                    $.ajax({
+                        url:"http://staging.jiebasan.com/users/profile" ,
+                        method:"GET",
+                        headers:{
+                            "Accept": "application/json",
+                            "Authorization":window.localStorage.token
+                        },
+                        contentType: "application/json",
+                        dataType: "json",
+                        //data: JSON.stringify({"name":$(".nickname").val()}),
+                        success:function(res){
+                            //console.log(res);
+                            window.localStorage.pledgeAmount = res.body.pledge_amount;
+                            window.localStorage.have_unread_messages = res.body.have_unread_messages;
+                            window.sessionStorage.balance_pledge = res.body.balance_pledge;
+                            window.sessionStorage.balance_normal = res.body.balance_normal;
+                            //$(".recharge-num").text(res.body.pledge_amount);
+                            //$(".balance-num").text(res.body.balance_normal);
+                            //if(res.body.balance_pledge<=0.0){
+                            //    $(".myDeposit").css({'fontSize':'14px','color':'#ff6d5b'}).val("￥0.00").attr("disabled","false");
+                            //}else{
+                            //    $(".myDeposit").val("￥"+res.body.balance_pledge);
+                            //}
+                        },
+                        error:function(res){
+                            //console.log(res);
+                        }
+                    });
+                }
+                getProfile();
                 if(window.localStorage.token == undefined){
                     window.location.href = "login.html";
                 }else if(window.sessionStorage.balance_pledge <=0){
