@@ -719,56 +719,57 @@ $(function(){
         }
     });
     //故障上报提交
-    //if($(".fault-type").children("span").hasClass("faultActive")){
-    //    $(".faultbtn").attr("disabled", false);
-    //}else {
-    //    $(".faultbtn").attr("disabled", true);
-    //}
     $(".faultbtn").click(function(){
-        if($(".fault1").hasClass("faultActive")){
-            var faultType =  "dock_lock_broken";
-        }else if($(".fault2").hasClass("faultActive")){
-            var faultType =  "handle_broken";
-        }else if($(".fault3").hasClass("faultActive")){
-            var faultType =  "face_broken";
-        }else if($(".fault4").hasClass("faultActive")){
-            var faultType =  "paint";
-        }else if($(".fault5").hasClass("faultActive")){
-            var faultType =  "lock_bone_broken";
-        }else if($(".faultOthers").hasClass("faultActive")){
-            var faultType =  "other";
-        }
-        $.ajax({
-            url: "http://staging.jiebasan.com/failure_reports",
-            method: "POST",
-            headers: {
-                "Accept": "application/json",
-                "Authorization":window.localStorage.token
-            },
-            contentType: "application/json",
-            dataType: "json",
-            data:JSON.stringify({
-                "failure_type":faultType,
-                "detail_address":$(".addr").val(),
-                "remark":$(".remarks").val(),
-                "image":"",
-                "latitude":"",
-                "longitude":""
-            }),
-            success:function(res){
-                //console.log(res);
-                $(".popup").show();
-                $(".popup").text("感谢您的上报");
-                setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',1500);
-                $(".faultbtn").attr("disabled","true");
-            },
-            error:function(res){
-                //console.log(res);
-                $(".popup").show();
-                $(".popup").text("请选择故障类型");
-                setTimeout('$(".popup").hide(),$(".popup").text("")',1500);
+        if($(".fault-type").find("span").hasClass("faultActive")){
+            //$(".faultbtn").attr("disabled", false);
+            if($(".fault1").hasClass("faultActive")){
+                var faultType =  "dock_lock_broken";
+            }else if($(".fault2").hasClass("faultActive")){
+                var faultType =  "handle_broken";
+            }else if($(".fault3").hasClass("faultActive")){
+                var faultType =  "face_broken";
+            }else if($(".fault4").hasClass("faultActive")){
+                var faultType =  "paint";
+            }else if($(".fault5").hasClass("faultActive")){
+                var faultType =  "lock_bone_broken";
+            }else if($(".faultOthers").hasClass("faultActive")){
+                var faultType =  "other";
             }
-        });
+            $.ajax({
+                url: "http://staging.jiebasan.com/failure_reports",
+                method: "POST",
+                headers: {
+                    "Accept": "application/json",
+                    "Authorization":window.localStorage.token
+                },
+                contentType: "application/json",
+                dataType: "json",
+                data:JSON.stringify({
+                    "failure_type":faultType,
+                    "detail_address":$(".addr").val(),
+                    "remark":$(".remarks").val(),
+                    "image":"",
+                    "latitude":"",
+                    "longitude":""
+                }),
+                success:function(res){;
+                    $(".popup").show();
+                    $(".popup").text("感谢您的上报");
+                    setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',1500);
+                    $(".faultbtn").attr("disabled","true");
+                },
+                error:function(res){
+                    //$(".popup").show();
+                    //$(".popup").text("请选择故障类型");
+                    //setTimeout('$(".popup").hide(),$(".popup").text("")',1500);
+                }
+            });
+        }else {
+            $(".popup").show();
+            $(".popup").text("请选择故障类型");
+            setTimeout('$(".popup").hide(),$(".popup").text("")',1500);
+        }
+
     });
     //我的钱包
     function getProfile(){
