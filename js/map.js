@@ -43,14 +43,14 @@ $(function(){
                             };
                             function addClickHandler(content,marker){
                                 marker.addEventListener("click",function(e){
-                                    console.log(e);
-                                    console.log(111);
+                                    //console.log(e);
+                                    //console.log(111);
                                     openInfo(content,e)}
                                 );
                             }
                             function openInfo(content,e){
                                 var p = e.target;
-                                console.log(p);
+                                //console.log(p);
                                 var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
                                 var infoWindow = new BMap.InfoWindow(content,opts);  // 创建信息窗口对象
                                 map.openInfoWindow(infoWindow,point); //开启信息窗口
@@ -72,8 +72,8 @@ $(function(){
 
                     },
                     error:function(res){
-                        console.log(res);
-                        console.log("错了")
+                        //console.log(res);
+                        //console.log("错了")
                     }
                 });
                 $(".locationIcon").click(function(){
@@ -106,8 +106,8 @@ $(function(){
                                 var longitude = obj.longitude;
                                 var content = obj.deploy_address + "</br><div><div style='width: 6px;!important;height: 6px;!important;border-radius: 100%;background: #ff6d5b; display: inline-block;margin-bottom:0.096618357rem;vertical-align: middle'></div>\n伞位数量"+obj.umbrella_slot + "</div><div><div style='width: 6px;!important;height: 6px;!important;border-radius: 100%;background: #ff6d5b; display: inline-block;vertical-align: middle;margin-bottom:0.096618357rem;'></div>\n可用雨伞<span style='color: #ff6d5b;'>"+obj.current_umbrella_count+"</span>把</div>";
                                 var point = new BMap.Point(longitude,latitude);
-                                console.log(point);
-                                console.log(123)
+                                //console.log(point);
+                                //console.log(123)
                                 //addMarker(point);
                                 var opts = {
                                     paddingTop:60,
@@ -118,14 +118,14 @@ $(function(){
                                 };
                                 function addClickHandler(content,marker){
                                     marker.addEventListener("click",function(e){
-                                        console.log(e);
-                                        console.log(111);
+                                        //console.log(e);
+                                        //console.log(111);
                                         openInfo(content,e)}
                                     );
                                 }
                                 function openInfo(content,e){
                                     var p = e.target;
-                                    console.log(p);
+                                    //console.log(p);
                                     var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
                                     var infoWindow = new BMap.InfoWindow(content,opts);  // 创建信息窗口对象
                                     map.openInfoWindow(infoWindow,point); //开启信息窗口
