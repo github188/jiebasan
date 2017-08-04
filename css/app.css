@@ -1793,6 +1793,7 @@ textarea{
 .goExpireCoupon{
     height: auto;
     display: block;
+    text-decoration: none;
 }
 .tiXianWrap{
     width: 6.56rem;
@@ -1960,4 +1961,7 @@ textarea{
 .numberCenter img{
     width: 100%;
     padding-top: 1.813333333rem;
+}
+#feedbackContent{
+    padding:0 10px;
 }
