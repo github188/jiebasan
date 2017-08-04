@@ -568,7 +568,7 @@ $(function(){
                         //res.body.splice($.inArray(this,res.body),1);
                         ////数组头部插入
                         //res.body.unshift(this);
-                        $(".userRecord-wrap").append($("<section class='bg-white wrap-center interval'><div><div class='border_bottom'><div class='message-top relative'><div class='use-time'>"+time+"</div><div class='user-state use-now'>"+state+"</div></div></div><div><div class='use-content'><div class='content-left'><div class='current-cost'><span class='now-money'>"+one+"</span></div><div class='borrow-point'><span class='umbrella-address'>"+two+"</span><div class='continue-charging'>"+four+"</div></div><div class='use-length'><span>"+three+"</span></div></div></div></div></div></section>"));
+                        $(".userRecord-wrap").append($("<section class='bg-white wrap-center interval'><div><div class='border_bottom'><div class='message-top relative'><div class='use-time'>"+time+"</div><div class='user-state use-now'>"+state+"</div></div></div><div><div class='use-content'><div class='content-left'><div class='current-cost'><span class='now-money'>"+one+"</span></div><div class='borrow-point flex'><span class='umbrella-address flex2'>"+two+"</span><div class='continue-charging flex1'>"+four+"</div></div><div class='use-length'><span>"+three+"</span></div></div></div></div></div></section>"));
                     }else{
                         var state = "已完成";
                         var time = startTime+"～"+endTime;
@@ -576,7 +576,7 @@ $(function(){
                         var two = "还伞点："+ obj.return_address;
                         var three = "使用时长："+obj.billing_time;
                         var four = obj.total_payment;
-                        $(".userRecord-wrap").append($("<section class='bg-white wrap-center interval'><div><div class='border_bottom'><div class='message-top relative'><div class='use-time'>"+time+"</div><div class='user-state use-now'>"+state+"</div></div></div><div><div class='use-content'><div class='content-left'><div class='current-cost'><span class='now-money'>"+one+"</span></div><div class='borrow-point'><span class='umbrella-address'>"+two+"</span><div class='charged'>"+four+"</div></div><div class='use-length'><span>"+three+"</span></div></div></div></div></div></section>"));
+                        $(".userRecord-wrap").append($("<section class='bg-white wrap-center interval'><div><div class='border_bottom'><div class='message-top relative'><div class='use-time'>"+time+"</div><div class='user-state use-now'>"+state+"</div></div></div><div><div class='use-content'><div class='content-left'><div class='current-cost'><span class='now-money'>"+one+"</span></div><div class='borrow-point flex'><span class='umbrella-address flex2'>"+two+"</span><div class='charged flex1'>"+four+"</div></div><div class='use-length'><span>"+three+"</span></div></div></div></div></div></section>"));
                     }
                 });
             }

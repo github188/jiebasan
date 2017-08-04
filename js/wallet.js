@@ -38,12 +38,12 @@ $(function(){
     //$(".myDeposit").val("￥"+window.sessionStorage.balance_pledge)
     $(".withdraw_cash").click(function(){
         if(window.sessionStorage.balance_pledge >0){
-            $(".withdraw_cash").attr("disabled",false);
+            $(".withdraw_cash").removeAttr('onclick');
             $(".tiXianWrap").css("display","block");
             $(".Popup-bg").css("display","block");
             //$(".withdraw_cash").css("background-color","#ffffff");
         }else{
-            $(".withdraw_cash").removeAttr('onclick');
+            $(".withdraw_cash").attr('disabled',"disabled");
             //$(".withdraw_cash").css("background-color","gray");
         }
     });
@@ -60,7 +60,7 @@ $(function(){
             $(".goRecharge").click(function(){
                 $(".fuyue").css("display","none");
                 $(".Popup-bg").css("display","none");
-                window.location.href = "rechargeDeposit.html";
+                window.location.href = "rechargeBalance.html";
             });
         }else if(window.sessionStorage.billing == "billing"){
             $(".dingDaning").css("display","block");
@@ -81,8 +81,6 @@ $(function(){
                 dataType: "json",
                 //data:JSON.stringify({}),
                 success:function(res){
-                    //console.log(res);
-                    //alert(res);
                     $(".popup").show();
                     $(".popup").text("提现成功");
                     setTimeout('$(".popup").hide(),$(".popup").text(""),window.location.replace("https://www.jiebasan.com/webapp")',1500);
