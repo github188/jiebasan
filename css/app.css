@@ -656,8 +656,12 @@ textarea{
     text-align: right;
 }
 .recharge-cash{
-    margin-top:5.5rem;
-    margin-bottom: 0.373333333rem;
+    /*margin-top:5.5rem;*/
+    /*margin-bottom: 0.373333333rem;*/
+    position: fixed;
+    left:0;
+    right:0;
+    bottom:0.48rem;
 }
 .recharge{
     background:#ff6d5b;
@@ -762,7 +766,8 @@ textarea{
     color: #282828;
 }
 .width90 img{
-    margin-top:-2px;
+    /*margin-top:-2px;*/
+    vertical-align: middle;
 }
 .text-right{
     text-align: right;
@@ -876,7 +881,7 @@ textarea{
     padding-bottom: 0.4rem;
 }
 .about-bottom{
-    font-size:10px;
+    font-size:12px;
     color:#282828;
     text-align:center;
     /*margin-top:6.453333333rem;*/
@@ -1107,6 +1112,7 @@ textarea{
     text-align:center;
     margin-top: 0.746666667rem;
     display: none;
+    padding-bottom: 0.48rem;
 }
 .tabal{
     display: none;
@@ -1151,7 +1157,7 @@ textarea{
     border:2px solid #ff6d5b;
 }
 .choose_wrap{
-    width: 8.826666667rem;
+    /*width: 8.826666667rem;*/
     height: 2.026666667rem;
     line-height: 2.026666667rem;
     text-align: center;
@@ -1164,9 +1170,9 @@ textarea{
     height: 1.013333333rem;
     font-size:18px;
     color:#fff;
-    margin-bottom: 0.373333333rem;
+    /*margin-bottom: 0.373333333rem;*/
     border: none;
-    margin-top:4.213333333rem;
+    /*margin-top:4.213333333rem;*/
 }
 .others_pop{
     width: 6.933333333rem;
