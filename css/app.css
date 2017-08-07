@@ -1306,7 +1306,7 @@ textarea{
     width:6.933333333rem;
     text-align: left;
     padding:0.2rem;
-    margin:6.16rem auto 0.533333333rem;
+    margin:0 auto 0.533333333rem;
 }
 .charge_free{
     font-size:14px;
@@ -1820,7 +1820,11 @@ textarea{
     display: none;
 }
 .goFaultReportBtnWrap{
-    margin-top: 8.8rem;
+    /*margin-top: 8.8rem;*/
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom:0.586666667rem;
 }
 .goFaultReportBtn{
     font-size: 16px;
@@ -1964,4 +1968,10 @@ textarea{
 }
 #feedbackContent{
     padding:0 10px;
+}
+.chargeContentWrap{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }

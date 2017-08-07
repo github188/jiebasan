@@ -24,7 +24,11 @@ function judgeState(){
                     $(".popup").show();
                     $(".popup").text("本次借伞超时，请重新扫码");
                     //setTimeout('$(".popup").show(),$(".popup").text("本次借伞超时，请重新扫码"),window.history.go(-1)',58000);
-                    setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',2000);
+                    if(window.sessionStorage.btnMark == "transition"){
+                        window.location.href = "transition.html";
+                    }else{
+                        setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',2000);
+                    }
                 }
             }
             //console.log(res.body[0]);
@@ -39,7 +43,7 @@ function judgeState(){
         }
     });
 }
-setInterval("judgeState()",2000);
+setInterval("judgeState()",1000);
 $(".goFaultReportBtn").click(function(){
     window.location.href = "faultReport.html";
 });
