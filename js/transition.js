@@ -19,6 +19,7 @@ $(function(){
             data:JSON.stringify({"dock_device_id": deviceId}),
             success:function(res){
                 window.sessionStorage.id = res.body.id;
+                alert("等待借伞");
                 window.location.href ="jiesan.html";
             },
             error:function(res){
@@ -42,7 +43,9 @@ $(function(){
             dataType: "json",
             //data: JSON.stringify({"name":$(".nickname").val()}),
             success:function(res){
+                alert("判断押金是否为负");
                 if(res.body.balance_pledge<=0.0){
+                    alert("冲押金");
                     window.location.href = "rechargeDeposit.html";
                 }else if(res.body.balance_normal<=0.0){
                     $(".popup").show();
