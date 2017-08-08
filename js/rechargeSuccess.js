@@ -12,6 +12,8 @@ $(function(){
             window.location.href = "index.html";
         }else if(window.sessionStorage.btnMark == "wallet"){
             window.location.href = "wallet.html";
+        }else if(window.sessionStorage.btnMark == "transition"){
+            window.location.href = "transition.html";
         }
     });
 });

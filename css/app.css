@@ -1863,7 +1863,7 @@ textarea{
     background-size: 100% 100%;
 }
 .logoWrap{
-    padding-top: 1.84rem;
+    padding-top: 0.64rem;
     text-align: center;
 }
 .logoWrap img{
@@ -1915,7 +1915,7 @@ textarea{
 .openLockWrap{
     padding-top: 0.56rem;
     text-align: center;
-    padding-bottom: 25px;
+    padding-bottom: 2.5rem;
 }
 .openLock{
     background:#ffffff;
@@ -1970,7 +1970,7 @@ textarea{
 }
 .numberCenter img{
     width: 100%;
-    padding-top: 1.813333333rem;
+    padding-top: 1.613333333rem;
 }
 #feedbackContent{
     padding:0 10px;

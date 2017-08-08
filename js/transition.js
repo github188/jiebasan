@@ -7,6 +7,7 @@ $(function(){
         //获取URL后的伞桩id
         var url = window.location.search;
         var deviceId = url.split("=")[1];
+        alert(deviceId);
         $.ajax({
             url: "https://staging.jiebasan.com/borrowing_requests",//开锁借伞
             method: "POST",
