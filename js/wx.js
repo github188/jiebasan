@@ -1,4 +1,5 @@
 $(function(){
+    FastClick.attach(document.body);
     //判断是不是在微信里访问
     function is_weixn(){
         var ua = navigator.userAgent.toLowerCase();

@@ -2,6 +2,7 @@
  * Created by hzc on 2017-8-4.
  */
 $(function(){
+    FastClick.attach(document.body);
     //开锁借伞
     function openDock(){
         //获取URL后的伞桩id

@@ -3,6 +3,7 @@
  */
 //提现
 $(function(){
+    FastClick.attach(document.body);
     function getUserInfo(){
         //我的钱包
         $.ajax({

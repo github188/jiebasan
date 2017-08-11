@@ -2,6 +2,7 @@
  * Created by hzc on 2017-7-14.
  */
 $(function(){
+    FastClick.attach(document.body);
     if(window.sessionStorage.rechargeBtn == "rechargeYe"){
         $(".rechargeSuccessFont").text("余额充值成功");
     }else if(window.sessionStorage.rechargeBtn == "rechargeYj"){

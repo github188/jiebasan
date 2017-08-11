@@ -3,6 +3,7 @@
  */
     // 百度地图API功能
 $(function(){
+    FastClick.attach(document.body);
     function map(){
         var map = new BMap.Map("allmap");  // 创建Map实例
         var geolocation = new BMap.Geolocation();

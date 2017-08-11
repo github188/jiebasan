@@ -2,6 +2,7 @@
  * Created by guojing on 2017-5-25.
  */
 $(function(){
+    FastClick.attach(document.body);
     //消费明细
     $.ajax({
         url:"http://www.jiebasan.com/cash_flows/outcome" ,

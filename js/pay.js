@@ -2,6 +2,7 @@
  * Created by hzc on 2017-6-7.
  */
 $(function(){
+    FastClick.attach(document.body);
     //判断是不是在微信里访问
     function is_weixn(){
         var ua = navigator.userAgent.toLowerCase();
