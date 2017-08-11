@@ -6,7 +6,7 @@ $(function(){
     function getUserInfo(){
         //我的钱包
         $.ajax({
-            url:"http://staging.jiebasan.com/users/profile" ,
+            url:"http://www.jiebasan.com/users/profile" ,
             method:"GET",
             headers:{
                 "Accept": "application/json",
@@ -71,7 +71,7 @@ $(function(){
             });
         }else{
             $.ajax({
-                url: "http://staging.jiebasan.com/user/pledge_withdraw",
+                url: "http://www.jiebasan.com/user/pledge_withdraw",
                 method: "POST",
                 headers: {
                     "Accept": "application/json",

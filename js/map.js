@@ -10,7 +10,7 @@ $(function(){
         geolocation.getCurrentPosition(function(r){
             if(this.getStatus() == BMAP_STATUS_SUCCESS){
                 //自定义图标
-                var myIcon = new BMap.Icon(' http://staging.jiebasan.com/assets/webapp/currentLocation-ace3f5474758effab13970226d67946aa3aab497f5788416cb213b24f9803c0d.png', new BMap.Size(32,32));
+                var myIcon = new BMap.Icon(' http://www.jiebasan.com/assets/webapp/currentLocation-ace3f5474758effab13970226d67946aa3aab497f5788416cb213b24f9803c0d.png', new BMap.Size(32,32));
                 var mk = new BMap.Marker(r.point,{icon:myIcon});//创建点
                 map.addOverlay(mk); // 将标注添加到地图中
                 var point = new BMap.Point(r.point.lng, r.point.lat);
@@ -19,7 +19,7 @@ $(function(){
                 map.centerAndZoom(point,16);
                 //获取附近的伞桩坐标
                 $.ajax({
-                    url:"http://staging.jiebasan.com/dock_devices/nearby",
+                    url:"http://www.jiebasan.com/dock_devices/nearby",
                     method:"GET",
                     headers:{
                         "Accept": "application/json",
@@ -58,7 +58,7 @@ $(function(){
                             //坐标转换完之后的回调函数
                             translateCallback = function (data){
                                 if(data.status === 0) {
-                                    var myIcon = new BMap.Icon('http://staging.jiebasan.com/assets/webapp/umbrellaIcon-4e6b0243941cf580916f85743ad01de7dbf2439aa25b60e6301576c804f77727.png', new BMap.Size(32,32));
+                                    var myIcon = new BMap.Icon('http://www.jiebasan.com/assets/webapp/umbrellaIcon-4e6b0243941cf580916f85743ad01de7dbf2439aa25b60e6301576c804f77727.png', new BMap.Size(32,32));
                                     var marker = new BMap.Marker(data.points[0],{icon:myIcon});
                                     map.addOverlay(marker); // 将标注添加到地图中
                                     addClickHandler(content,marker);
@@ -90,7 +90,7 @@ $(function(){
                     });
                     var center = map.getCenter();
                     $.ajax({
-                        url:"http://staging.jiebasan.com/dock_devices/nearby",
+                        url:"http://www.jiebasan.com/dock_devices/nearby",
                         method:"GET",
                         headers:{
                             "Accept": "application/json",

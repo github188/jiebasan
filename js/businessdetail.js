@@ -4,7 +4,7 @@
 $(function(){
     //消费明细
     $.ajax({
-        url:"http://staging.jiebasan.com/cash_flows/outcome" ,
+        url:"http://www.jiebasan.com/cash_flows/outcome" ,
         method:"GET",
         headers:{
             "Accept": "application/json",
@@ -31,7 +31,7 @@ $(function(){
     $("#rechargeDetail").click(function(){
         $(".recharge-wrap").empty();
         $.ajax({
-            url:"http://staging.jiebasan.com/cash_flows/income" ,
+            url:"http://www.jiebasan.com/cash_flows/income" ,
             method:"GET",
             headers:{
                 "Accept": "application/json",
@@ -64,7 +64,7 @@ $(function(){
     $("#consumption").click(function(){
         $(".consumption-wrap").empty();
         $.ajax({
-            url:"http://staging.jiebasan.com/cash_flows/outcome" ,
+            url:"http://www.jiebasan.com/cash_flows/outcome" ,
             method:"GET",
             headers:{
                 "Accept": "application/json",

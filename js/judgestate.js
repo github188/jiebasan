@@ -4,7 +4,7 @@
 var count;
 function judgeState(){
     $.ajax({
-        url:"http://staging.jiebasan.com/borrowing_requests/request_borrowing_state" ,
+        url:"http://www.jiebasan.com/borrowing_requests/request_borrowing_state" ,
         method:"GET",
         headers:{
             "Accept": "application/json"

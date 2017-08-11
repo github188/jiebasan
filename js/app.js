@@ -139,7 +139,7 @@ $(function(){
                 },1000);
             }
             $.ajax({
-                url: "https://staging.jiebasan.com/phone_verifications",
+                url: "https://www.jiebasan.com/phone_verifications",
                 method: "POST",
                 headers: {
                     "Accept": "application/json"
@@ -181,7 +181,7 @@ $(function(){
             return;
         }if($(".checkedLogin").hasClass("checkedBg")){
             $.ajax({
-                url: "https://staging.jiebasan.com/sessions/phone",
+                url: "https://www.jiebasan.com/sessions/phone",
                 method: "POST",
                 headers: {
                     "Accept": "application/json",
@@ -295,7 +295,7 @@ $(function(){
     //-----------判断用户是否登录结束-----------------------------------------------------------------------------------
     //正在使用
     $.ajax({
-        url: "https://staging.jiebasan.com/borrowing_orders/current_order",
+        url: "https://www.jiebasan.com/borrowing_orders/current_order",
         method: "GET",
         headers: {
             "Accept": "application/json",
@@ -373,7 +373,7 @@ $(function(){
     //});
     //获取可用优惠券数据
     $.ajax({
-        url:"https://staging.jiebasan.com/coupons" ,
+        url:"https://www.jiebasan.com/coupons" ,
         method:"GET",
         headers:{
             "Accept": "application/json",
@@ -413,7 +413,7 @@ $(function(){
     });
     //优惠卷使用说明
     $.ajax({
-        url:"https://staging.jiebasan.com/exception_declarations/coupon" ,
+        url:"https://www.jiebasan.com/exception_declarations/coupon" ,
         method:"GET",
         headers:{
             "Accept": "application/json"
@@ -436,7 +436,7 @@ $(function(){
         window.location.href = "overdueCoupon";
     });
     $.ajax({
-        url:"https://staging.jiebasan.com/coupons/expired_or_used" ,
+        url:"https://www.jiebasan.com/coupons/expired_or_used" ,
         method:"GET",
         headers:{
             "Accept": "application/json",
@@ -466,6 +466,7 @@ $(function(){
     //设置页
     $(".confirm").click(function(){
         localStorage.clear();
+        sessionStorage.clear();
         window.location.href = "index.html";
     });
     $(".toFeedBack").click(function(){
@@ -485,7 +486,7 @@ $(function(){
     $(".nickname").val( window.localStorage.name);
     $(".save-revise").click(function(){
         $.ajax({
-           url:"https://staging.jiebasan.com/users/profile" ,
+           url:"https://www.jiebasan.com/users/profile" ,
             method:"PUT",
             headers:{
                 "Accept": "application/json",
@@ -513,7 +514,7 @@ $(function(){
             setTimeout('$(".popup").hide(),$(".popup").text("")',1500);
         }else {
             $.ajax({
-                url: "https://staging.jiebasan.com/feedbacks",
+                url: "https://www.jiebasan.com/feedbacks",
                 method: "POST",
                 headers: {
                     "Accept": "application/json",
@@ -538,7 +539,7 @@ $(function(){
     });
     //使用记录
     $.ajax({
-        url: "https://staging.jiebasan.com/borrowing_orders",
+        url: "https://www.jiebasan.com/borrowing_orders",
         method: "GET",
         headers: {
             "Accept": "application/json",
@@ -595,7 +596,7 @@ $(function(){
     });
     //我的消息
     $.ajax({
-        url: "https://staging.jiebasan.com/messages",
+        url: "https://www.jiebasan.com/messages",
         method: "GET",
         headers: {
             "Accept": "application/json",
@@ -638,7 +639,7 @@ $(function(){
     });
     //使用指南(借伞说明, 还伞说明)
     $.ajax({
-        url:"https://staging.jiebasan.com/instructions" ,
+        url:"https://www.jiebasan.com/instructions" ,
         method:"GET",
         headers:{
             "Accept": "application/json",
@@ -666,7 +667,7 @@ $(function(){
     });
     // 异常说明
     $.ajax({
-        url:"https://staging.jiebasan.com/exception_declarations/abnormal" ,
+        url:"https://www.jiebasan.com/exception_declarations/abnormal" ,
         method:"GET",
         headers:{
             "Accept": "application/json"
@@ -687,7 +688,7 @@ $(function(){
     });
     //计费说明
     $.ajax({
-        url:"https://staging.jiebasan.com/exception_declarations/charging" ,
+        url:"https://www.jiebasan.com/exception_declarations/charging" ,
         method:"GET",
         headers:{
             "Accept": "application/json"
@@ -707,10 +708,10 @@ $(function(){
     });
     //返回故障类型
     $.ajax({
-        url:"https://staging.jiebasan.com/failure_reports/failure_types" ,
+        url:"https://www.jiebasan.com/failure_reports/failure_types" ,
         method:"GET",
         headers:{
-            "Accept": "application/json",
+            "Accept": "application/json"
         },
         contentType: "application/json",
         dataType: "json",
@@ -744,7 +745,7 @@ $(function(){
                 var faultType =  "other";
             }
             $.ajax({
-                url: "https://staging.jiebasan.com/failure_reports",
+                url: "https://www.jiebasan.com/failure_reports",
                 method: "POST",
                 headers: {
                     "Accept": "application/json",
@@ -760,7 +761,7 @@ $(function(){
                     "latitude":"",
                     "longitude":""
                 }),
-                success:function(res){;
+                success:function(res){
                     $(".popup").show();
                     $(".popup").text("感谢您的上报");
                     setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',1500);
@@ -782,17 +783,17 @@ $(function(){
     //我的钱包
     function getProfile(){
         $.ajax({
-            url:"https://staging.jiebasan.com/users/profile" ,
+            url:"https://www.jiebasan.com/users/profile" ,
             method:"GET",
             headers:{
                 "Accept": "application/json",
                 "Authorization":window.localStorage.token
             },
-            contentType: "application/json",
-            dataType: "json",
+            //contentType: "application/json",
+            //dataType: "json",
             //data: JSON.stringify({"name":$(".nickname").val()}),
             success:function(res){
-                //console.log(res);
+                console.log(res);
                 window.localStorage.pledgeAmount = res.body.pledge_amount;
                 window.localStorage.have_unread_messages = res.body.have_unread_messages;
                 window.sessionStorage.balance_pledge = res.body.balance_pledge;

@@ -5,7 +5,7 @@ $(function(){
         if(ua.match(/MicroMessenger/i)=="micromessenger"){
             var originalUrl = window.location.href;
             $.ajax({
-                url: "http://staging.jiebasan.com/wechat/signature",
+                url: "http://www.jiebasan.com/wechat/signature",
                 method: "GET",
                 headers: {
                     "Accept": "application/json"
@@ -50,7 +50,7 @@ $(function(){
                     window.sessionStorage.btnMark = "index";
                     function getProfile(){
                         $.ajax({
-                            url:"http://staging.jiebasan.com/users/profile" ,
+                            url:"http://www.jiebasan.com/users/profile" ,
                             method:"GET",
                             headers:{
                                 "Accept": "application/json",
@@ -105,7 +105,7 @@ $(function(){
                                     var urlStr = JSON.stringify(result.resultStr);
                                     var deviceId = urlStr.split("=")[1];//获取伞桩id
                                     $.ajax({
-                                        url: "http://staging.jiebasan.com/borrowing_requests",
+                                        url: "http://www.jiebasan.com/borrowing_requests",
                                         method: "POST",
                                         headers: {
                                             "Accept": "application/json",
@@ -144,7 +144,7 @@ $(function(){
             var deviceId = url.split("=")[1];
             function getProfile(){
                 $.ajax({
-                    url:"http://staging.jiebasan.com/users/profile" ,
+                    url:"http://www.jiebasan.com/users/profile" ,
                     method:"GET",
                     headers:{
                         "Accept": "application/json",
@@ -184,7 +184,7 @@ $(function(){
 
                     }else {
                         $.ajax({
-                            url: "http://staging.jiebasan.com/borrowing_requests",//开锁借伞
+                            url: "http://www.jiebasan.com/borrowing_requests",//开锁借伞
                             method: "POST",
                             headers: {
                                 "Accept": "application/json",

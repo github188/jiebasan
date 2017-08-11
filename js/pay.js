@@ -14,7 +14,7 @@ $(function(){
                     if($('.checkedWrap').hasClass("checkedBg")){
                         //console.log(111);
                         $.ajax({
-                            url: "http://staging.jiebasan.com/deposit_trades",//创建余额充值交易单
+                            url: "http://www.jiebasan.com/deposit_trades",//创建余额充值交易单
                             method: "POST",
                             headers: {
                                 "Accept": "application/json",
@@ -89,7 +89,7 @@ $(function(){
                 window.sessionStorage.rechargeBtn = "rechargeYj";
                 //alert("充押金");
                 $.ajax({
-                    url: "http://staging.jiebasan.com/deposit_trades/pledge",//创建余额充值交易单
+                    url: "http://www.jiebasan.com/deposit_trades/pledge",//创建余额充值交易单
                     method: "POST",
                     headers: {
                         "Accept": "application/json",
@@ -154,7 +154,7 @@ $(function(){
                     if($('.checkedWrap').hasClass("checkedBg")){
                         //console.log(111)
                         $.ajax({
-                            url: "http://staging.jiebasan.com/deposit_trades",//创建余额充值交易单
+                            url: "http://www.jiebasan.com/deposit_trades",//创建余额充值交易单
                             method: "POST",
                             headers: {
                                 "Accept": "application/json",
@@ -192,7 +192,7 @@ $(function(){
                 //console.log('充押金');
                 if($('.checkedWrap').hasClass("checkedBg")) {
                     $.ajax({
-                        url: "http://staging.jiebasan.com/deposit_trades/pledge",//创建余额充值交易单
+                        url: "http://www.jiebasan.com/deposit_trades/pledge",//创建余额充值交易单
                         method: "POST",
                         headers: {
                             "Accept": "application/json",

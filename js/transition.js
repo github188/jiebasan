@@ -7,9 +7,8 @@ $(function(){
         //获取URL后的伞桩id
         var url = window.location.search;
         var deviceId = url.split("=")[1];
-        alert(deviceId);
         $.ajax({
-            url: "https://staging.jiebasan.com/borrowing_requests",//开锁借伞
+            url: "https://www.jiebasan.com/borrowing_requests",//开锁借伞
             method: "POST",
             headers: {
                 "Accept": "application/json",
@@ -19,8 +18,15 @@ $(function(){
             dataType: "json",
             data:JSON.stringify({"dock_device_id": deviceId}),
             success:function(res){
-                window.sessionStorage.id = res.body.id;
-                window.location.href ="jiesan.html";
+                console.log(res);
+                if(res.meta.status == 400){
+                    $(".popup").show();
+                    $(".popup").text(res.meta.message);
+                    setTimeout('$(".popup").hide(),$(".popup").text("")',2000);
+                }else{
+                    window.sessionStorage.id = res.body.id;
+                    window.location.href ="jiesan.html";
+                }
             },
             error:function(res){
                 console.log(res);
@@ -33,7 +39,7 @@ $(function(){
     //判断有没有充押金
     function judgeDeposit(){
         $.ajax({
-            url:"https://staging.jiebasan.com/users/profile" ,
+            url:"https://www.jiebasan.com/users/profile",
             method:"GET",
             headers:{
                 "Accept": "application/json",
