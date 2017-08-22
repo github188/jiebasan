@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f2a4647a-f311-44e7-a320-448704e9c055" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/app.css" afterPath="$PROJECT_DIR$/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jiesanSuccess.html" afterPath="$PROJECT_DIR$/jiesanSuccess.html" />
     </list>
     <ignored path="sharedumbrella.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,7 +57,7 @@
       <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.137931">
+            <state vertical-scroll-proportion="0.0">
               <caret line="1508" column="12" selection-start-line="1508" selection-start-column="12" selection-end-line="1508" selection-end-column="12" />
               <folding />
             </state>
@@ -67,18 +67,28 @@
       <file leaf-file-name="jiesan.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jiesan.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.571428">
+            <state vertical-scroll-proportion="-12.642858">
               <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feedback.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jiesanSuccess.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jiesanSuccess.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.48212227">
+              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feedback.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feedback.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70126873">
-              <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+            <state vertical-scroll-proportion="-18.321428">
+              <caret line="27" column="91" selection-start-line="27" selection-start-column="91" selection-end-line="27" selection-end-column="91" />
               <folding />
             </state>
           </provider>
@@ -86,16 +96,6 @@
       </file>
       <file leaf-file-name="rechargeSuccess.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/rechargeSuccess.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="judgestate.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/judgestate.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
@@ -171,7 +171,6 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/introcoupon.html" />
         <option value="$PROJECT_DIR$/jiesan.html" />
-        <option value="$PROJECT_DIR$/jiesanSuccess.html" />
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/message.html" />
         <option value="$PROJECT_DIR$/overdueCoupon.html" />
@@ -191,6 +190,7 @@
         <option value="$PROJECT_DIR$/js/wallet.js" />
         <option value="$PROJECT_DIR$/js/wx.js" />
         <option value="$PROJECT_DIR$/css/app.css" />
+        <option value="$PROJECT_DIR$/jiesanSuccess.html" />
       </list>
     </option>
   </component>
@@ -591,13 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jiesanSuccess.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.785715">
-          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-24.857143">
@@ -665,7 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -691,7 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -760,24 +751,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.137931">
+        <state vertical-scroll-proportion="0.0">
           <caret line="1508" column="12" selection-start-line="1508" selection-start-column="12" selection-end-line="1508" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jiesan.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.571428">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/feedback.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70126873">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+        <state vertical-scroll-proportion="-18.321428">
+          <caret line="27" column="91" selection-start-line="27" selection-start-column="91" selection-end-line="27" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jiesan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.642858">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jiesanSuccess.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48212227">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
           <folding />
         </state>
       </provider>
