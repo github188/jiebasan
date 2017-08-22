@@ -52,7 +52,7 @@ $(function(){
             success:function(res){
                 if(res.body.balance_pledge<=0.0){
                     window.location.href = "rechargeDeposit.html";
-                }else if(res.body.balance_normal<=0.0){
+                }else if(res.body.balance_normal < 0.0){
                     $(".popup").show();
                     $(".popup").text("您的余额为负");
                     setTimeout('$(".popup").text(""),$(".popup").hide(),window.location.href = "rechargeDeposit.html"',1500);
