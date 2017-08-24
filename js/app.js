@@ -565,7 +565,6 @@ $(function(){
                     }
                     //console.log();
                     if(obj.state == "billing"){
-                        //
                         var state = "使用中";
                         var time = startTime;
                         var one = "当前费用："+ this.total_fee;

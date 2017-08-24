@@ -20,13 +20,13 @@ $(function(){
             data:JSON.stringify({"dock_device_id": deviceId}),
             success:function(res){
                 console.log(res);
-                if(res.meta.status == 400){
+                if(res.meta.status == 200){
+                    window.sessionStorage.id = res.body.id;
+                    window.location.href ="jiesan.html";
+                }else{
                     $(".popup").show();
                     $(".popup").text(res.meta.message);
                     setTimeout('$(".popup").hide(),$(".popup").text("")',2000);
-                }else{
-                    window.sessionStorage.id = res.body.id;
-                    window.location.href ="jiesan.html";
                 }
             },
             error:function(res){
