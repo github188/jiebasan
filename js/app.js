@@ -310,7 +310,7 @@ $(function(){
             //$.each(res.body,function(ind,obj){
             window.sessionStorage.billing = res.body.state;
             var usedTime = "使用时长";
-            if(res.body.state == "billing"){
+            if(res.body.state == "billing" || res.body.state == "unbilling"){
                 //console.log(res.body)
                 //res.body.splice($.inArray(this,res.body),1);
                 //res.body.unshift(this);
@@ -570,7 +570,11 @@ $(function(){
                         var one = "当前费用："+ this.total_fee;
                         var two = "借伞点："+ this.borrow_address;
                         var three = "已用时长："+this.billing_time;
-                        var four = "持续计费中";
+                        if(obj.state == "billing"){
+                            var four = "持续计费中";
+                        }else{
+                            var four = "待计费";
+                        }
                         //res.body.splice($.inArray(this,res.body),1);
                         ////数组头部插入
                         //res.body.unshift(this);

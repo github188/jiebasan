@@ -9,6 +9,7 @@ $(function(){
         var geolocation = new BMap.Geolocation();
         var geolocationControl = new BMap.GeolocationControl();
         geolocation.getCurrentPosition(function(r){
+
             if(this.getStatus() == BMAP_STATUS_SUCCESS){
                 //自定义图标
                 var myIcon = new BMap.Icon(' http://www.jiebasan.com/assets/webapp/currentLocation-ace3f5474758effab13970226d67946aa3aab497f5788416cb213b24f9803c0d.png', new BMap.Size(32,32));
@@ -20,7 +21,7 @@ $(function(){
                 map.centerAndZoom(point,16);
                 //获取附近的伞桩坐标
                 $.ajax({
-                    url:"http://www.jiebasan.com/dock_devices/nearby",
+                    url:"https://www.jiebasan.com/dock_devices/nearby",
                     method:"GET",
                     headers:{
                         "Accept": "application/json",
@@ -28,9 +29,11 @@ $(function(){
                     },
                     contentType: "application/json",
                     dataType: "json",
-                    data: {"latitude":lat,"longitude":lng},
+                    data: {"latitude":'0.0',"longitude":'0.0'},
                     success:function(res){
+                        console.log(res.body);
                         $.each(res.body,function(ind,obj){
+                            console.log(obj);
                             var latitude = obj.latitude;
                             var longitude = obj.longitude;
                             var content = obj.deploy_address + "</br><div><div style='width: 6px;!important;height: 6px;!important;border-radius: 100%;background: #ff6d5b; display: inline-block;margin-bottom:0.096618357rem;vertical-align: middle'></div>\n伞位数量"+obj.umbrella_slot + "</div><div><div style='width: 6px;!important;height: 6px;!important;border-radius: 100%;background: #ff6d5b; display: inline-block;vertical-align: middle;margin-bottom:0.096618357rem;'></div>\n可用雨伞<span style='color: #ff6d5b;'>"+obj.current_umbrella_count+"</span>把</div>";
@@ -44,8 +47,6 @@ $(function(){
                             };
                             function addClickHandler(content,marker){
                                 marker.addEventListener("click",function(e){
-                                    //console.log(e);
-                                    //console.log(111);
                                     openInfo(content,e)}
                                 );
                             }
@@ -91,7 +92,7 @@ $(function(){
                     });
                     var center = map.getCenter();
                     $.ajax({
-                        url:"http://www.jiebasan.com/dock_devices/nearby",
+                        url:"https://www.jiebasan.com/dock_devices/nearby",
                         method:"GET",
                         headers:{
                             "Accept": "application/json",
@@ -101,6 +102,7 @@ $(function(){
                         dataType: "json",
                         data: {"latitude":center.lat,"longitude":center.lng},
                         success:function(res){
+                            console.log(res.body)
                             $.each(res.body,function(ind,obj){
                                 //console.log(obj)
                                 var latitude = obj.latitude;
@@ -133,6 +135,7 @@ $(function(){
                                 }
                                 //坐标转换完之后的回调函数
                                 translateCallback = function (data){
+                                    alert(data.status)
                                     if(data.status === 0) {
                                         var myIcon = new BMap.Icon('http://bbs.zhaocaibank.com/template/fujian/icon/umbrellaIcon.png', new BMap.Size(32,32));
                                         var marker = new BMap.Marker(data.points[0],{icon:myIcon});
@@ -157,8 +160,7 @@ $(function(){
             }
             else {
                 alert('failed'+this.getStatus());
-            }
-            ;{enableHighAccuracy:true}});
+            };{enableHighAccuracy:true}});
         // 初始化地图,用城市名设置地图中心点
         map.addControl(new BMap.NavigationControl());
         map.getCenter();
