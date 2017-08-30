@@ -21,7 +21,11 @@ $(function(){
                 $(".consumption-wrap").removeClass("bg-white");
                 $(".consumption-wrap").append($("<div class='img-content'><img src='images/no-consume.png' alt=''><div class='no-consume' style=''>您还没有进行过消费呢</div></div>"))
             }else{
-
+                $.each(res.body,function(ind,obj){
+                    console.log(obj.created_at);
+                    var time = obj.created_at.substring(0,16).replace("T"," ");
+                    $(".consumption-wrap").append($("<div class='border_bottom bg-white'><div class='transaction-content consumption-content relative'><div class='tile-wrap'><span>"+ obj.comment +"</span><br><span>"+ time +"</span></div><div class='consumpt-money'>"+obj.amount+"元</div></div></div>"))
+                });
             }
         },
         error:function(res){

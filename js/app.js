@@ -316,6 +316,11 @@ $(function(){
                 //res.body.unshift(this);
                 var usingTime = "已用时长";
                 $("#userNow").css("display","block");
+                if(res.body.state == "unbilling"){
+                    $(".rightFont").text("待计费");
+                }else{
+                    $(".rightFont").text("计费中");
+                }
                 $(".goFaultIcon").css("top","5.886667rem");
                 $(".dingWeiFont").text(res.body.borrow_address);
                 $(".shiChangFont").text(res.body.billing_time);
@@ -733,6 +738,7 @@ $(function(){
     });
     //故障上报提交
     $(".faultbtn").click(function(){
+        $(".faultbtn").attr("disabled","disabled");
         if($(".fault-type").find("span").hasClass("faultActive")){
             //$(".faultbtn").attr("disabled", false);
             if($(".fault1").hasClass("faultActive")){
@@ -766,10 +772,10 @@ $(function(){
                     "longitude":""
                 }),
                 success:function(res){
+                    $(".faultbtn").removeAttr("disabled");
                     $(".popup").show();
                     $(".popup").text("感谢您的上报");
                     setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',1500);
-                    $(".faultbtn").attr("disabled","true");
                 },
                 error:function(res){
                     //$(".popup").show();
