@@ -738,9 +738,9 @@ $(function(){
     });
     //故障上报提交
     $(".faultbtn").click(function(){
-        $(".faultbtn").attr("disabled","disabled");
         if($(".fault-type").find("span").hasClass("faultActive")){
-            //$(".faultbtn").attr("disabled", false);
+            $(this).attr("disabled",true);
+            console.log(this);
             if($(".fault1").hasClass("faultActive")){
                 var faultType =  "dock_lock_broken";
             }else if($(".fault2").hasClass("faultActive")){
@@ -772,10 +772,10 @@ $(function(){
                     "longitude":""
                 }),
                 success:function(res){
-                    $(".faultbtn").removeAttr("disabled");
+                    $(".faultbtn").attr("disabled",false);
                     $(".popup").show();
                     $(".popup").text("感谢您的上报");
-                    setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',1500);
+                    //setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',1500);
                 },
                 error:function(res){
                     //$(".popup").show();
@@ -784,6 +784,7 @@ $(function(){
                 }
             });
         }else {
+            console.log(this);
             $(".popup").show();
             $(".popup").text("请选择故障类型");
             setTimeout('$(".popup").hide(),$(".popup").text("")',1500);

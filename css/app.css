@@ -8,6 +8,7 @@ html,body{
     /*overflow: hidden;*/
     max-width: 750px;
     font-size: 12px;
+    height: 100%;
 }
 /*html,body{ overflow-y:scroll;}*/
 /*html,body{ overflow-y:scroll; min-height:101%;}*/

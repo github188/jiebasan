@@ -215,7 +215,7 @@ $(function(){
         }
     }
     is_weixn();
-    var count;
+    var count=1;
     function judgeState(){
         $.ajax({
             url:"https://www.jiebasan.com/borrowing_requests/request_borrowing_state" ,
