@@ -316,12 +316,13 @@ $(function(){
                 //res.body.unshift(this);
                 var usingTime = "已用时长";
                 $("#userNow").css("display","block");
+                $(".goFallPageWrap").css("left","0");
                 if(res.body.state == "unbilling"){
                     $(".rightFont").text("待计费");
                 }else{
                     $(".rightFont").text("计费中");
                 }
-                $(".goFaultIcon").css("top","5.886667rem");
+                $(".goFaultIcon").css("top","6.2rem");
                 $(".dingWeiFont").text(res.body.borrow_address);
                 $(".shiChangFont").text(res.body.billing_time);
                 $(".xiaoFeiFont").text(res.body.total_fee);
@@ -332,6 +333,7 @@ $(function(){
         },
         error:function(res){
             $("#userNow").css("display","none");
+            $(".goFallPageWrap").css("left","-6rem");
             $(".goFaultIcon").css("top","1.786666667rem");
             //console.log(res);
             //var text = eval("("+res.responseText+")");
@@ -651,7 +653,7 @@ $(function(){
         url:"https://www.jiebasan.com/instructions" ,
         method:"GET",
         headers:{
-            "Accept": "application/json",
+            "Accept": "application/json"
         },
         contentType: "application/json",
         dataType: "json",

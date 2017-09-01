@@ -1982,3 +1982,102 @@ textarea{
     right: 0;
     bottom: 0;
 }
+.fallPageBgWrap{
+    height: 4rem;
+    background: url("../images/fallpagebg2x.png") center center no-repeat;
+    background-size: 100% 100%;
+}
+.logoName{
+    font-size:18px;
+    color:#767676;
+    letter-spacing:-0.18px;
+    text-align:center;
+    margin-top: -8px;
+}
+.fallPageBtn{
+    width: 100%;
+    height: 1.44rem;
+    margin-top: 0.48rem;
+}
+.fallPageButton{
+    display: block;
+    text-align: center;
+}
+.fallPageBtn a img{
+    width: 5.493333333rem;
+    height: 2.026666667rem;
+}
+.ruleDes{
+    margin-top: 1.333333333rem;
+    bottom:1.333333333rem;
+    padding-bottom: 30px;
+}
+.ruleDesCenter p{
+    line-height:24px;
+}
+.ruleDesTitle{
+    font-size:18px;
+    color:#282828;
+    letter-spacing:-0.2px;
+    text-align:left;
+    padding-bottom: 0.4rem;
+}
+.ruleDesCenter{
+    margin:0 0.48rem;
+    font-size:14px;
+    color:#8a8a8a;
+    letter-spacing:-0.16px;
+    text-align:left;
+}
+.twoDown{
+    padding-top:0.4rem;
+}
+.oneDown{
+    padding-bottom: 10px;
+}
+.goFallPageWrap{
+    position: fixed;
+    top:6.2rem;
+    opacity:0.9;
+    background:#151515;
+    width:5.333333333rem;
+    height:1.333333333rem;
+    border-top-right-radius:60px;
+    border-bottom-right-radius:60px;
+    padding:5px 0;
+    left: -6rem;
+}
+.goFallPage{
+    margin-top:-5px;
+    height: inherit;
+    color: #fff;
+    padding:5px;
+    line-height: 0.533333333rem;
+    margin-right: 5px;
+    width: 3.786666667rem;
+    display: inline-block;
+    -webkit-box-flex: 148;
+    -webkit-flex:148;
+    -ms-flex: 148;
+    flex: 148;
+}
+.redFont{
+    color: #FB796E;
+}
+.exclamationMark{
+    display: inline-block;
+    height: inherit;
+    margin-top:-5px;
+    line-height: 1.333333333rem;
+    width: 1.246666667rem;
+    -webkit-box-flex: 40;
+    -webkit-flex: 40;
+    -ms-flex: 40;
+    flex: 40;
+    text-align: center;
+}
+.exclamationMark img{
+    vertical-align: middle;
+    width:20px;
+    height: 16px;
+}
