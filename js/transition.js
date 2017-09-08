@@ -9,7 +9,7 @@ $(function(){
         var url = window.location.search;
         //var deviceId = url.split("=")[1];
         var deviceId = url.substr(url.length-6,url.length);
-        alert(deviceId);
+        window.sessionStorage.deviceId = deviceId;
         $.ajax({
             url: "https://www.jiebasan.com/borrowing_requests",//开锁借伞
             method: "POST",
