@@ -51,7 +51,7 @@ $(function(){
     });
     $(".back").click(function(){
         if(window.sessionStorage.btnMark == "transition"){
-            window.location.href = 'https://www.jiebasan.com/borrowing_requests/new?device_id='+ window.sessionStorage.deviceId;
+            window.location.href = 'https://www.jiebasan.com/webapp/transition?device_id='+ window.sessionStorage.deviceId;
         }else{
             window.location.go(-1);
         }
