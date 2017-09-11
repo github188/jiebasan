@@ -3,13 +3,14 @@
  */
 $(function(){
     FastClick.attach(document.body);
+    var url = window.location.search;
+    //var deviceId = url.split("=")[1];
+    var deviceId = url.substr(url.length-6,url.length);
+    window.sessionStorage.deviceId = deviceId;
     //开锁借伞
     function openDock(){
         //获取URL后的伞桩id
-        var url = window.location.search;
-        //var deviceId = url.split("=")[1];
-        var deviceId = url.substr(url.length-6,url.length);
-        window.sessionStorage.deviceId = deviceId;
+
         $.ajax({
             url: "https://www.jiebasan.com/borrowing_requests",//开锁借伞
             method: "POST",
@@ -52,6 +53,7 @@ $(function(){
             dataType: "json",
             //data: JSON.stringify({"name":$(".nickname").val()}),
             success:function(res){
+                console.log(res);
                 if(res.body.balance_pledge<=0.0){
                     window.location.href = "rechargeDeposit.html";
                 }else if(res.body.balance_normal < 0.0){
