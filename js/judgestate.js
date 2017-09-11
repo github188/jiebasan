@@ -27,7 +27,7 @@ $(function(){
                         $(".popup").text("本次借伞超时，请重新扫码");
                         //setTimeout('$(".popup").show(),$(".popup").text("本次借伞超时，请重新扫码"),window.history.go(-1)',58000);
                         if(window.sessionStorage.btnMark == "transition"){
-                            window.location.href = "transition.html";
+                            window.location.href = 'https://www.jiebasan.com/webapp/transition?device_id='+ window.sessionStorage.deviceId;
                         }else{
                             setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',2000);
                         }

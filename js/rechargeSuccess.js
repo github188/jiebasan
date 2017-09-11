@@ -14,7 +14,7 @@ $(function(){
         }else if(window.sessionStorage.btnMark == "wallet"){
             window.location.href = "wallet.html";
         }else if(window.sessionStorage.btnMark == "transition"){
-            window.location.href = "transition.html";
+            window.location.href = 'https://www.jiebasan.com/webapp/transition?device_id='+ window.sessionStorage.deviceId;
         }
     });
 });
