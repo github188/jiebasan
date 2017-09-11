@@ -207,7 +207,7 @@ $(function(){
                     window.sessionStorage.balance_normal = res.body.balance_normal;
                     window.sessionStorage.balance_pledge = res.body.balance_pledge;
                     if(window.sessionStorage.btnMark == "transition"){
-                        window.location.href = "transition.html";
+                        window.location.href =  'https://www.jiebasan.com/webapp/transition?device_id='+ window.sessionStorage.deviceId;
                     }else{
                         location.href = "index.html";
                     }
