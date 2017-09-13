@@ -10,7 +10,6 @@ $(function(){
     //开锁借伞
     function openDock(){
         //获取URL后的伞桩id
-
         $.ajax({
             url: "https://www.jiebasan.com/borrowing_requests",//开锁借伞
             method: "POST",
@@ -52,12 +51,11 @@ $(function(){
             //data: JSON.stringify({"name":$(".nickname").val()}),
             success:function(res){
                 console.log(res);
-                if(res.body.zhima_score == 'null'){
+                if(res.body.zhima_score == 'null' ||　res.body.zhima_score == null){
                     if(res.body.balance_pledge<=0.0){
                         window.location.href = "rechargeDeposit.html";
                     }else if(res.body.balance_normal < 0.0){
-                        $(".popup").show();
-                        $(".popup").text("您的余额为负");
+                        $(".popup").show().text("您的余额为负");
                         setTimeout('$(".popup").text(""),$(".popup").hide(),window.location.href = "rechargeDeposit.html"',1500);
                     }
                 } else{
