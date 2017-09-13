@@ -58,6 +58,9 @@ $(function(){
                         $(".popup").show().text("您的余额为负");
                         setTimeout('$(".popup").text(""),$(".popup").hide(),window.location.href = "rechargeDeposit.html"',2000);
                     }
+                    else{
+                        openDock();
+                    }
                 } else{
                     openDock();
                 }
