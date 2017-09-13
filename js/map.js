@@ -76,6 +76,8 @@ $(function(){
                     error:function(res){
                         //console.log(res);
                         //console.log("错了")
+                        $(".popup").show().text(res.meta.message);
+                        setTimeout('$(".popup").text("").hide()',2000);
                     }
                 });
                 $(".locationIcon").click(function(){
@@ -152,8 +154,8 @@ $(function(){
 
                         },
                         error:function(res){
-                            console.log(res);
-                            console.log("错了")
+                            $(".popup").show().text(res.meta.message);
+                            setTimeout('$(".popup").text("").hide()',2000);
                         }
                     });
                 });

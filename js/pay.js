@@ -70,6 +70,8 @@ $(function(){
                             },
                             error:function(res){
                                 console.log(res);
+                                $(".popup").show().text(res.meta.message);
+                                setTimeout('$(".popup").text("").hide()',2000);
                                 //alert(res);
                             }
                         });
@@ -142,6 +144,8 @@ $(function(){
                         }
                     },
                     error:function(res){
+                        $(".popup").show().text(res.meta.message);
+                        setTimeout('$(".popup").text("").hide()',2000);
                         //console.log(res);
                         //alert(res);
                     }
@@ -172,6 +176,8 @@ $(function(){
                             },
                             error:function(res){
                                 console.log(res);
+                                $(".popup").show().text(res.meta.message);
+                                setTimeout('$(".popup").text("").hide()',2000);
                             }
                         });
                     }
@@ -210,6 +216,8 @@ $(function(){
                         },
                         error: function (res) {
                             //console.log(res);
+                            $(".popup").show().text(res.meta.message);
+                            setTimeout('$(".popup").text("").hide()',2000);
                         }
                     });
                 }else{

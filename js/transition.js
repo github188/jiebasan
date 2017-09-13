@@ -56,14 +56,15 @@ $(function(){
                         window.location.href = "rechargeDeposit.html";
                     }else if(res.body.balance_normal < 0.0){
                         $(".popup").show().text("您的余额为负");
-                        setTimeout('$(".popup").text(""),$(".popup").hide(),window.location.href = "rechargeDeposit.html"',1500);
+                        setTimeout('$(".popup").text(""),$(".popup").hide(),window.location.href = "rechargeDeposit.html"',2000);
                     }
                 } else{
                     openDock();
                 }
             },
             error:function(res){
-                //console.log(res);
+                $(".popup").show().text(res.meta.message);
+                setTimeout('$(".popup").text("").hide()',2000);
             }
         });
     }

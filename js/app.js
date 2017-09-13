@@ -158,6 +158,10 @@ $(function(){
                     }else {
 
                     }
+                },
+                error:function(res){
+                    $(".popup").show().text(res.meta.message);
+                    setTimeout('$(".popup").text("").hide()',2000);
                 }
             });
         }
@@ -418,6 +422,8 @@ $(function(){
         },
         error:function(res){
             //console.log(res);
+            $(".popup").show().text(res.meta.message);
+            setTimeout('$(".popup").text("").hide()',2000);
         }
     });
     $(".goExpireCoupon").click(function(){
@@ -441,6 +447,8 @@ $(function(){
         },
         error:function(res){
             //console.log(res);
+            $(".popup").show().text(res.meta.message);
+            setTimeout('$(".popup").text("").hide()',2000);
         }
     });
     //查看过期优惠券
@@ -472,6 +480,8 @@ $(function(){
         },
         error:function(res){
             //console.log(res);
+            $(".popup").show().text(res.meta.message);
+            setTimeout('$(".popup").text("").hide()',2000);
         }
     });
 
@@ -516,6 +526,8 @@ $(function(){
             },
             error:function(res){
                 //console.log(res);
+                $(".popup").show().text(res.meta.message);
+                setTimeout('$(".popup").text("").hide()',2000);
             }
         });
     });
@@ -651,6 +663,8 @@ $(function(){
         },
         error:function(res){
             //console.log(res);
+            $(".popup").show().text(res.meta.message);
+            setTimeout('$(".popup").text("").hide()',2000);
         }
     });
     //使用指南(借伞说明, 还伞说明)
@@ -679,6 +693,8 @@ $(function(){
         },
         error:function(res){
             //console.log(res);
+            $(".popup").show().text(res.meta.message);
+            setTimeout('$(".popup").text("").hide()',2000);
         }
     });
     // 异常说明
@@ -720,6 +736,8 @@ $(function(){
         },
         error:function(res){
             //console.log(res);
+            $(".popup").show().text(res.meta.message);
+            setTimeout('$(".popup").text("").hide()',2000);
         }
     });
     //返回故障类型
@@ -741,6 +759,8 @@ $(function(){
         },
         error:function(res){
             //console.log(res);
+            $(".popup").show().text(res.meta.message);
+            setTimeout('$(".popup").text("").hide()',2000);
         }
     });
     //故障上报提交
@@ -785,9 +805,8 @@ $(function(){
                     //setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',1500);
                 },
                 error:function(res){
-                    //$(".popup").show();
-                    //$(".popup").text("请选择故障类型");
-                    //setTimeout('$(".popup").hide(),$(".popup").text("")',1500);
+                    $(".popup").show().text(res.meta.message);
+                    setTimeout('$(".popup").text("").hide()',2000);
                 }
             });
         }else {
@@ -831,6 +850,8 @@ $(function(){
             },
             error:function(res){
                 //console.log(res);
+                $(".popup").show().text(res.meta.message);
+                setTimeout('$(".popup").text("").hide()',2000);
             }
         });
     }

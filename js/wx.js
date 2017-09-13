@@ -77,6 +77,8 @@ $(function(){
                             },
                             error:function(res){
                                 //console.log(res);
+                                $(".popup").show().text(res.meta.message);
+                                setTimeout('$(".popup").text("").hide()',2000);
                             }
                         });
                     }
@@ -168,6 +170,8 @@ $(function(){
                     },
                     error:function(res){
                         //console.log(res);
+                        $(".popup").show().text(res.meta.message);
+                        setTimeout('$(".popup").text("").hide()',2000);
                     }
                 });
             }
