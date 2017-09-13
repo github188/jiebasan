@@ -6,7 +6,7 @@ $(function(){
         if(ua.match(/MicroMessenger/i)=="micromessenger"){
             var originalUrl = window.location.href;
             $.ajax({
-                url: "http://www.jiebasan.com/wechat/signature",
+                url: "https://www.jiebasan.com/wechat/signature",
                 method: "GET",
                 headers: {
                     "Accept": "application/json"
@@ -51,7 +51,7 @@ $(function(){
                     window.sessionStorage.btnMark = "index";
                     function getProfile(){
                         $.ajax({
-                            url:"http://www.jiebasan.com/users/profile" ,
+                            url:"https://www.jiebasan.com/users/profile" ,
                             method:"GET",
                             headers:{
                                 "Accept": "application/json",
@@ -61,11 +61,12 @@ $(function(){
                             dataType: "json",
                             //data: JSON.stringify({"name":$(".nickname").val()}),
                             success:function(res){
-                                //console.log(res);
+                                console.log(res);
                                 window.localStorage.pledgeAmount = res.body.pledge_amount;
                                 window.localStorage.have_unread_messages = res.body.have_unread_messages;
                                 window.sessionStorage.balance_pledge = res.body.balance_pledge;
                                 window.sessionStorage.balance_normal = res.body.balance_normal;
+                                window.sessionStorage.zhima_score = res.body.zhima_score;
                                 //$(".recharge-num").text(res.body.pledge_amount);
                                 //$(".balance-num").text(res.body.balance_normal);
                                 //if(res.body.balance_pledge<=0.0){
@@ -80,13 +81,16 @@ $(function(){
                         });
                     }
                     getProfile();
+
                     if(window.localStorage.token == undefined){
                         window.location.href = "login.html";
-                    }else if(window.sessionStorage.balance_pledge <=0){
-                        window.location.href = "rechargeDeposit.html";
-                    }else if(window.sessionStorage.balance_normal <0){
-                        window.location.href = "rechargeBalance.html";
-                    }else {
+                    }else if(window.sessionStorage.zhima_score == 'null'){
+                        if(window.sessionStorage.balance_pledge <=0){
+                            window.location.href = "rechargeDeposit.html";
+                        }else if(window.sessionStorage.balance_normal <0){
+                            window.location.href = "rechargeBalance.html";
+                        }
+                    } else {
                         wx.checkJsApi({
                             jsApiList: [
                                 'scanQRCode'
@@ -106,7 +110,7 @@ $(function(){
                                     var urlStr = JSON.stringify(result.resultStr);
                                     var deviceId = urlStr.split("=")[1];//获取伞桩id
                                     $.ajax({
-                                        url: "http://www.jiebasan.com/borrowing_requests",
+                                        url: "https://www.jiebasan.com/borrowing_requests",
                                         method: "POST",
                                         headers: {
                                             "Accept": "application/json",
@@ -118,8 +122,8 @@ $(function(){
                                         success:function(result){
                                             //alert(121212);
                                             //console.log(res);
-                                            alert("res:"+JSON.stringify(result));
-                                            alert(result.body.id);
+                                            //alert("res:"+JSON.stringify(result));
+                                            //alert(result.body.id);
                                             window.sessionStorage.id = result.body.id;
                                             window.location.href = "jiesan.html";
                                         },
@@ -145,7 +149,7 @@ $(function(){
             var deviceId = url.split("=")[1];
             function getProfile(){
                 $.ajax({
-                    url:"http://www.jiebasan.com/users/profile" ,
+                    url:"https://www.jiebasan.com/users/profile" ,
                     method:"GET",
                     headers:{
                         "Accept": "application/json",
@@ -158,6 +162,7 @@ $(function(){
                         //console.log(res);
                         //window.localStorage.pledgeAmount = res.body.pledge_amount;
                         //window.localStorage.have_unread_messages = res.body.have_unread_messages;
+                        window.sessionStorage.zhima_score = res.body.zhima_score;
                         window.sessionStorage.balance_pledge = res.body.balance_pledge;
                         window.sessionStorage.balance_normal = res.body.balance_normal;
                     },
@@ -170,22 +175,28 @@ $(function(){
             //点击借伞
             $(".borrowBtn").click(function(){
                 if($("#userNow").css("display") == "block"){
-                    $(".popup").show();
-                    $(".popup").text("您有一笔订单尚未结束，暂无法借伞");
+                    $(".popup").show().text("您有一笔订单尚未结束，暂无法借伞");
                     setTimeout('$(".popup").hide(),$(".popup").text("")',2000);
                 }else{
                     if(window.localStorage.token == undefined){
                         window.location.href = "login.html";
-                    }else if(window.sessionStorage.balance_pledge <=0){
-                        window.location.href = "rechargeDeposit.html";
-                    }else if(window.sessionStorage.balance_normal <0){
-                        $(".popup").show();
-                        $(".popup").text("请补足余额后，再行借伞");
-                        setTimeout('$(".popup").text(""),$(".popup").hide(),window.location.href = "rechargeBalance.html";',2000)
-
-                    }else {
+                    }else if(window.sessionStorage.zhima_score == 'null'){
+                        if(window.sessionStorage.balance_pledge <=0){
+                            window.location.href = "rechargeDeposit.html";
+                        }else if(window.sessionStorage.balance_normal <0){
+                            window.location.href = "rechargeBalance.html";
+                        }
+                    }
+                    //else if(window.sessionStorage.balance_pledge <=0){
+                    //    window.location.href = "rechargeDeposit.html";
+                    //}else if(window.sessionStorage.balance_normal <0){
+                    //    $(".popup").show();
+                    //    $(".popup").text("请补足余额后，再行借伞");
+                    //    setTimeout('$(".popup").text(""),$(".popup").hide(),window.location.href = "rechargeBalance.html"',2000);
+                    //}
+                    else {
                         $.ajax({
-                            url: "http://www.jiebasan.com/borrowing_requests",//开锁借伞
+                            url: "https://www.jiebasan.com/borrowing_requests",//开锁借伞
                             method: "POST",
                             headers: {
                                 "Accept": "application/json",
@@ -196,9 +207,14 @@ $(function(){
                             data:JSON.stringify({"dock_device_id": deviceId}),
                             success:function(res){
                                 console.log(res);
-                                console.log(res.body.id);
-                                window.sessionStorage.id = res.body.id;
-                                window.location.href ="jiesan.html";
+                                //console.log(res.body.id);
+                                if(res.meta.status == 200){
+                                    window.sessionStorage.id = res.body.id;
+                                    window.location.href ="jiesan.html";
+                                }else{
+                                    $(".popup").show().text(res.meta.message);
+                                    setTimeout('$(".popup").hide(),$(".popup").text("")',2000);
+                                }
                             },
                             error:function(res){
                                 console.log(res);

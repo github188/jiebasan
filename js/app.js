@@ -190,12 +190,15 @@ $(function(){
                 },
                 contentType: "application/json",
                 dataType: "json",
-                data: JSON.stringify({"phone": $.trim($("#phone").val()), "code": $.trim($("#identifying").val()),"invitation_code":""}),
+                data: JSON.stringify({"phone": $.trim($("#phone").val()), "code": $.trim($("#identifying").val())}),
                 success:function(res){
                     console.log(res);
-                    $(".popup").show();
-                    $(".popup").text(res.meta.message);
-                    setTimeout('$(".popup").hide(),$(".popup").text("")',1500);
+                    if(res.meta.message == "OK"){
+                        $(".popup").hide();
+                    }else{
+                        $(".popup").show().text(res.meta.message);
+                        setTimeout('$(".popup").hide(),$(".popup").text("")',1500);
+                    }
                     var phone = res.body.phone.substr(4,11);
                     window.localStorage.phone =phone;//手机号
                     window.localStorage.id = res.body.id;//用户id
@@ -211,7 +214,6 @@ $(function(){
                     }else{
                         location.href = "index.html";
                     }
-                    
                 },
                 error:function(res){
                     console.log(res);
@@ -348,15 +350,17 @@ $(function(){
     });
     //点击充值
     $(".recharge").click(function(){
-        if(window.sessionStorage.balance_pledge <= 0.0){
-            $(".quitPopup").css("display","block");
-            $(".Popup-bg").css("display","block");
-            $(".goRecharge").click(function(){
-                window.sessionStorage.btnMark = "wallet";
-                $(".quitPopup").css("display","none");
-                $(".Popup-bg").css("display","none");
-                window.location.href = "rechargeDeposit.html";
-            });
+        if(window.sessionStorage.zhima_score == 'null'){
+            if(window.sessionStorage.balance_pledge <= 0.0){
+                $(".quitPopup").css("display","block");
+                $(".Popup-bg").css("display","block");
+                $(".goRecharge").click(function(){
+                    window.sessionStorage.btnMark = "wallet";
+                    $(".quitPopup").css("display","none");
+                    $(".Popup-bg").css("display","none");
+                    window.location.href = "rechargeDeposit.html";
+                });
+            }
         }else if(window.sessionStorage.balance_normal <0.0){
             //$(".quitPopup").css("display","block");
             //$(".Popup-top").text("您的余额不足");
@@ -504,6 +508,7 @@ $(function(){
             dataType: "json",
             data: JSON.stringify({"name":$(".nickname").val()}),
             success:function(res){
+                console.log(res);
                 window.localStorage.name = res.body.name;
                 $(".nickname").val(window.localStorage.name);
                 //console.log(res);
@@ -811,12 +816,17 @@ $(function(){
                 window.localStorage.have_unread_messages = res.body.have_unread_messages;
                 window.sessionStorage.balance_pledge = res.body.balance_pledge;
                 window.sessionStorage.balance_normal = res.body.balance_normal;
+                window.sessionStorage.zhima_score = res.body.zhima_score;
                 $(".recharge-num").text(res.body.pledge_amount);
                 $(".balance-num").text(res.body.balance_normal);
-                if(res.body.balance_pledge<=0.0){
-                    $(".myDeposit").css({'fontSize':'14px','color':'#ff6d5b'}).val("￥0.00").attr("disabled","false");
+                if(res.body.zhima_score == 'null' || res.body.zhima_score == null){
+                    if(res.body.balance_pledge<=0.0){
+                        $(".myDeposit").css({'fontSize':'14px','color':'#ff6d5b'}).val("￥0.00").attr("disabled","false");
+                    }else{
+                        $(".myDeposit").val("￥"+res.body.balance_pledge);
+                    }
                 }else{
-                    $(".myDeposit").val("￥"+res.body.balance_pledge);
+                    $(".myDeposit").val("芝麻信用"+res.body.zhima_score+"，免押金");
                 }
             },
             error:function(res){

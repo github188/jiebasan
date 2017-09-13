@@ -27,15 +27,13 @@ $(function(){
                     window.sessionStorage.id = res.body.id;
                     window.location.href ="jiesan.html";
                 }else{
-                    $(".popup").show();
-                    $(".popup").text(res.meta.message);
+                    $(".popup").show().text(res.meta.message);
                     setTimeout('$(".popup").hide(),$(".popup").text("")',2000);
                 }
             },
             error:function(res){
                 console.log(res);
-                $(".popup").show();
-                $(".popup").text(res.meta.message);
+                $(".popup").show().text(res.meta.message);
                 setTimeout('$(".popup").hide(),$(".popup").text("")',2000);
             }
         });
@@ -54,13 +52,15 @@ $(function(){
             //data: JSON.stringify({"name":$(".nickname").val()}),
             success:function(res){
                 console.log(res);
-                if(res.body.balance_pledge<=0.0){
-                    window.location.href = "rechargeDeposit.html";
-                }else if(res.body.balance_normal < 0.0){
-                    $(".popup").show();
-                    $(".popup").text("您的余额为负");
-                    setTimeout('$(".popup").text(""),$(".popup").hide(),window.location.href = "rechargeDeposit.html"',1500);
-                }else{
+                if(res.body.zhima_score == 'null'){
+                    if(res.body.balance_pledge<=0.0){
+                        window.location.href = "rechargeDeposit.html";
+                    }else if(res.body.balance_normal < 0.0){
+                        $(".popup").show();
+                        $(".popup").text("您的余额为负");
+                        setTimeout('$(".popup").text(""),$(".popup").hide(),window.location.href = "rechargeDeposit.html"',1500);
+                    }
+                } else{
                     openDock();
                 }
             },

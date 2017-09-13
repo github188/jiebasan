@@ -1517,8 +1517,8 @@ textarea{
     border-radius: 5px;
     position: fixed;
     top: 9rem;
-    left:2.8rem;
-    /*right: 0px;*/
+    left:2rem;
+    right: 2rem;
     /*bottom: 0px;*/
     margin: auto;
     z-index: 10;

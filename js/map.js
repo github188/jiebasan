@@ -102,7 +102,7 @@ $(function(){
                         dataType: "json",
                         data: {"latitude":center.lat,"longitude":center.lng},
                         success:function(res){
-                            console.log(res.body)
+                            //console.log(res.body)
                             $.each(res.body,function(ind,obj){
                                 //console.log(obj)
                                 var latitude = obj.latitude;
@@ -135,7 +135,7 @@ $(function(){
                                 }
                                 //坐标转换完之后的回调函数
                                 translateCallback = function (data){
-                                    alert(data.status)
+                                    //alert(data.status)
                                     if(data.status === 0) {
                                         var myIcon = new BMap.Icon('http://bbs.zhaocaibank.com/template/fujian/icon/umbrellaIcon.png', new BMap.Size(32,32));
                                         var marker = new BMap.Marker(data.points[0],{icon:myIcon});
@@ -159,7 +159,7 @@ $(function(){
                 });
             }
             else {
-                alert('failed'+this.getStatus());
+                //alert('failed'+this.getStatus());
             };{enableHighAccuracy:true}});
         // 初始化地图,用城市名设置地图中心点
         map.addControl(new BMap.NavigationControl());
