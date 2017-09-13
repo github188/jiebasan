@@ -83,65 +83,67 @@ $(function(){
                         });
                     }
                     getProfile();
-
                     if(window.localStorage.token == undefined){
                         window.location.href = "login.html";
-                    }else if(window.sessionStorage.zhima_score == 'null'){
-                        if(window.sessionStorage.balance_pledge <=0){
-                            window.location.href = "rechargeDeposit.html";
-                        }else if(window.sessionStorage.balance_normal <0){
-                            window.location.href = "rechargeBalance.html";
-                        }
-                    } else {
-                        wx.checkJsApi({
-                            jsApiList: [
-                                'scanQRCode'
-                            ],
-                            success: function (res) {
-                                //alert(JSON.stringify(res));
+                    }else{
+                        if(window.sessionStorage.zhima_score == 'null'){
+                            if(window.sessionStorage.balance_pledge <=0){
+                                window.location.href = "rechargeDeposit.html";
+                            }else if(window.sessionStorage.balance_normal <0){
+                                window.location.href = "rechargeBalance.html";
                             }
-                        });
-                        //调扫一扫功能
-                        wx.ready(function(){
-                            //alert("1111");
-                            wx.scanQRCode({
-                                needResult: 1,
-                                scanType: ["qrCode"],
-                                success: function (result) {
-                                    //alert("result.resultStr:"+result.resultStr);
-                                    var urlStr = JSON.stringify(result.resultStr);
-                                    var deviceId = urlStr.split("=")[1];//获取伞桩id
-                                    $.ajax({
-                                        url: "https://www.jiebasan.com/borrowing_requests",
-                                        method: "POST",
-                                        headers: {
-                                            "Accept": "application/json",
-                                            "Authorization":window.localStorage.token
-                                        },
-                                        contentType: "application/json",
-                                        dataType: "json",
-                                        data:JSON.stringify({"dock_device_id": deviceId}),
-                                        success:function(result){
-                                            //alert(121212);
-                                            //console.log(res);
-                                            //alert("res:"+JSON.stringify(result));
-                                            //alert(result.body.id);
-                                            window.sessionStorage.id = result.body.id;
-                                            window.location.href = "jiesan.html";
-                                        },
-                                        error:function(res){
-                                            console.log(res);
-                                            //var message = res.responseText.replace(/[^\u4e00-\u9fa5]/gi,"");
-                                            $(".popup").show();
-                                            $(".popup").text(res.meta.message);
-                                            setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',2000);
-                                            //alert(res);
-                                        }
-                                    });
+                        }else {
+                            wx.checkJsApi({
+                                jsApiList: [
+                                    'scanQRCode'
+                                ],
+                                success: function (res) {
+                                    //alert(JSON.stringify(res));
                                 }
-                            })
-                        });
+                            });
+                            //调扫一扫功能
+                            wx.ready(function(){
+                                //alert("1111");
+                                wx.scanQRCode({
+                                    needResult: 1,
+                                    scanType: ["qrCode"],
+                                    success: function (result) {
+                                        //alert("result.resultStr:"+result.resultStr);
+                                        var urlStr = JSON.stringify(result.resultStr);
+                                        var deviceId = urlStr.split("=")[1];//获取伞桩id
+                                        $.ajax({
+                                            url: "https://www.jiebasan.com/borrowing_requests",
+                                            method: "POST",
+                                            headers: {
+                                                "Accept": "application/json",
+                                                "Authorization":window.localStorage.token
+                                            },
+                                            contentType: "application/json",
+                                            dataType: "json",
+                                            data:JSON.stringify({"dock_device_id": deviceId}),
+                                            success:function(result){
+                                                //alert(121212);
+                                                //console.log(res);
+                                                //alert("res:"+JSON.stringify(result));
+                                                //alert(result.body.id);
+                                                window.sessionStorage.id = result.body.id;
+                                                window.location.href = "jiesan.html";
+                                            },
+                                            error:function(res){
+                                                console.log(res);
+                                                //var message = res.responseText.replace(/[^\u4e00-\u9fa5]/gi,"");
+                                                $(".popup").show();
+                                                $(".popup").text(res.meta.message);
+                                                setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',2000);
+                                                //alert(res);
+                                            }
+                                        });
+                                    }
+                                })
+                            });
+                        }
                     }
+
                 }
 
             });
@@ -178,12 +180,12 @@ $(function(){
             getProfile();
             //点击借伞
             $(".borrowBtn").click(function(){
-                if($("#userNow").css("display") == "block"){
-                    $(".popup").show().text("您有一笔订单尚未结束，暂无法借伞");
-                    setTimeout('$(".popup").hide(),$(".popup").text("")',2000);
+                if(window.localStorage.token == undefined){
+                    window.location.href = "login.html";
                 }else{
-                    if(window.localStorage.token == undefined){
-                        window.location.href = "login.html";
+                    if( $("#userNow").css("display") == "block"){
+                        $(".popup").show().text("您有一笔订单尚未结束，暂无法借伞");
+                        setTimeout('$(".popup").hide(),$(".popup").text("")',2000);
                     }else if(window.sessionStorage.zhima_score == 'null'){
                         if(window.sessionStorage.balance_pledge <=0){
                             window.location.href = "rechargeDeposit.html";
@@ -268,13 +270,13 @@ $(function(){
             },
             error:function(res){
                 //alert(JSON.stringify(res));
-                console.log(res);
-                $(".popup").show();
-                $(".popup").text(res.meta.message);
-                setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',2000);
+                //console.log(res);
+                //$(".popup").show();
+                //$(".popup").text(res.meta.message);
+                //setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',2000);
             }
         });
     }
-    setInterval("judgeState()",1000);
+    setInterval(judgeState(),1000);
 });
 

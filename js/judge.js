@@ -37,13 +37,13 @@ $(function(){
             error:function(res){
                 //alert(JSON.stringify(res));
                 console.log(res);
-                $(".popup").show();
-                $(".popup").text(res.meta.message);
-                setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',2000);
+                //$(".popup").show();
+                //$(".popup").text(res.meta.message);
+                //setTimeout('$(".popup").hide(),$(".popup").text(""),window.history.go(-1)',2000);
             }
         });
     }
-    setInterval("judgeState()",1000);
+    setInterval(judgeState(),1000);
 });
 
 
