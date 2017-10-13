@@ -354,7 +354,7 @@ $(function(){
     });
     //点击充值
     $(".recharge").click(function(){
-        if(window.sessionStorage.zhima_score == 'null'){
+        if(window.sessionStorage.zhima_score == 'null' || window.sessionStorage.zhima_score == null){
             if(window.sessionStorage.balance_pledge <= 0.0){
                 $(".quitPopup").css("display","block");
                 $(".Popup-bg").css("display","block");
@@ -365,7 +365,7 @@ $(function(){
                     window.location.href = "rechargeDeposit.html";
                 });
             }
-        }else if(window.sessionStorage.balance_normal <0.0){
+        }else if(window.sessionStorage.balance_normal <=0.0){
             //$(".quitPopup").css("display","block");
             //$(".Popup-top").text("您的余额不足");
             //$(".Popup-bg").css("display","block");

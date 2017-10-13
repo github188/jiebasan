@@ -45,7 +45,7 @@ $(function(){
             }
         });
     }
-    setInterval("judgeState()",1000);
+    setInterval(judgeState(),1000);
     $(".goFaultReportBtn").click(function(){
         window.location.href = "faultReport.html";
     });

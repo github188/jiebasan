@@ -31,9 +31,9 @@ $(function(){
                     dataType: "json",
                     data: {"latitude":'0.0',"longitude":'0.0'},
                     success:function(res){
-                        console.log(res.body);
+                        //console.log(res.body);
                         $.each(res.body,function(ind,obj){
-                            console.log(obj);
+                            //console.log(obj);
                             var latitude = obj.latitude;
                             var longitude = obj.longitude;
                             var content = obj.deploy_address + "</br><div><div style='width: 6px;!important;height: 6px;!important;border-radius: 100%;background: #ff6d5b; display: inline-block;margin-bottom:0.096618357rem;vertical-align: middle'></div>\n伞位数量"+obj.umbrella_slot + "</div><div><div style='width: 6px;!important;height: 6px;!important;border-radius: 100%;background: #ff6d5b; display: inline-block;vertical-align: middle;margin-bottom:0.096618357rem;'></div>\n可用雨伞<span style='color: #ff6d5b;'>"+obj.current_umbrella_count+"</span>把</div>";
@@ -125,8 +125,8 @@ $(function(){
                                     marker.addEventListener("click",function(e){
                                         //console.log(e);
                                         //console.log(111);
-                                        openInfo(content,e)}
-                                    );
+                                        openInfo(content,e)
+                                    });
                                 }
                                 function openInfo(content,e){
                                     var p = e.target;
