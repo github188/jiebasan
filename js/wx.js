@@ -93,10 +93,10 @@ $(function(){
                         console.log("111");
                         if(window.sessionStorage.zhima_score == 'null'){
                             console.log("222");
-                            if(window.sessionStorage.balance_pledge <=0){
+                            if(window.sessionStorage.balance_pledge <=0.0 || window.sessionStorage.balance_pledge <="0.0"){
                                 console.log("333");
                                 window.location.href = "rechargeDeposit.html";
-                            }else if(window.sessionStorage.balance_normal <0){
+                            }else if(window.sessionStorage.balance_normal <=0.0 || window.sessionStorage.balance_normal <= "0.0"){
                                 console.log("444");
                                 window.location.href = "rechargeBalance.html";
                             }else{
@@ -262,7 +262,7 @@ $(function(){
                         if(window.sessionStorage.balance_pledge <=0){
                             console.log("666");
                             window.location.href = "../rechargeDeposit.html";
-                        }else if(window.sessionStorage.balance_normal <0){
+                        }else if(window.sessionStorage.balance_normal <=0.0 || window.sessionStorage.balance_normal <= "0.0"){
                             console.log("777");
                             window.location.href = "../rechargeBalance.html";
                         }else{

@@ -354,8 +354,9 @@ $(function(){
     });
     //点击充值
     $(".recharge").click(function(){
+        // alert("000")
         if(window.sessionStorage.zhima_score == 'null' || window.sessionStorage.zhima_score == null){
-            if(window.sessionStorage.balance_pledge <= 0.0){
+            if(window.sessionStorage.balance_pledge <= 0.0 || window.sessionStorage.balance_pledge <= "0.0"){
                 $(".quitPopup").css("display","block");
                 $(".Popup-bg").css("display","block");
                 $(".goRecharge").click(function(){
@@ -364,19 +365,24 @@ $(function(){
                     $(".Popup-bg").css("display","none");
                     window.location.href = "rechargeDeposit.html";
                 });
+            }else if(window.sessionStorage.balance_normal <=0.0 || window.sessionStorage.balance_normal <= "0.0"){
+                window.sessionStorage.btnMark = "wallet";
+                window.location.href = "rechargeBalance.html";
             }
-        }else if(window.sessionStorage.balance_normal <=0.0){
-            //$(".quitPopup").css("display","block");
-            //$(".Popup-top").text("您的余额不足");
-            //$(".Popup-bg").css("display","block");
-            //$(".goRecharge").click(function(){
-            window.sessionStorage.btnMark = "wallet";
-            window.location.href = "rechargeBalance.html";
-            //});
-        }
-        else{
-            window.sessionStorage.btnMark = "wallet";
-            window.location.href = "rechargeBalance.html";
+        }else{
+           if(window.sessionStorage.balance_pledge <= 0.0 || window.sessionStorage.balance_pledge <= "0.0"){
+                $(".quitPopup").css("display","block");
+                $(".Popup-bg").css("display","block");
+                $(".goRecharge").click(function(){
+                    window.sessionStorage.btnMark = "wallet";
+                    $(".quitPopup").css("display","none");
+                    $(".Popup-bg").css("display","none");
+                    window.location.href = "rechargeDeposit.html";
+                });
+            }else if(window.sessionStorage.balance_normal <=0.0 || window.sessionStorage.balance_normal <= "0.0"){
+                window.sessionStorage.btnMark = "wallet";
+                window.location.href = "rechargeBalance.html";
+            }
         }
     });
     //查看我的优惠券
@@ -839,7 +845,7 @@ $(function(){
                 $(".recharge-num").text(res.body.pledge_amount);
                 $(".balance-num").text(res.body.balance_normal);
                 if(res.body.zhima_score == 'null' || res.body.zhima_score == null){
-                    if(res.body.balance_pledge<=0.0){
+                    if(res.body.balance_pledge<=0.0 || res.body.balance_pledge<="0.0"){
                         $(".myDeposit").css({'fontSize':'14px','color':'#ff6d5b'}).val("￥0.00").attr("disabled","false");
                     }else{
                         $(".myDeposit").val("￥"+res.body.balance_pledge);

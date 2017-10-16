@@ -71,7 +71,7 @@ $(function(){
     $(".queding").click(function(){
         $(".tiXianWrap").css("display","none");
         $(".Popup-bg").css("display","none");
-        if(window.sessionStorage.balance_normal<0){
+        if(window.sessionStorage.balance_normal<=0.0 || window.sessionStorage.balance_normal<="0.0"){
             $(".fuyue").css("display","block");
             $(".Popup-bg").css("display","block");
             $(".goRecharge").click(function(){
