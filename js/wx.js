@@ -62,11 +62,15 @@ $(function(){
                             //data: JSON.stringify({"name":$(".nickname").val()}),
                             success:function(res){
                                 console.log(res);
+                                if(res.meta.status == 401 && res.meta.message == "Unauthorized!"){
+                                    location.href = "login.html"
+                                }
                                 window.localStorage.pledgeAmount = res.body.pledge_amount;
                                 window.localStorage.have_unread_messages = res.body.have_unread_messages;
                                 window.sessionStorage.balance_pledge = res.body.balance_pledge;
                                 window.sessionStorage.balance_normal = res.body.balance_normal;
                                 window.sessionStorage.zhima_score = res.body.zhima_score;
+
                                 //$(".recharge-num").text(res.body.pledge_amount);
                                 //$(".balance-num").text(res.body.balance_normal);
                                 //if(res.body.balance_pledge<=0.0){
@@ -129,6 +133,9 @@ $(function(){
                                                     //console.log(res);
                                                     //alert("res:"+JSON.stringify(result));
                                                     //alert(result.body.id);
+                                                    if(res.meta.status == 401 && res.meta.message == "Unauthorized!"){
+                                                        location.href = "login.html"
+                                                    }
                                                     window.sessionStorage.id = result.body.id;
                                                     window.location.href = "jiesan.html";
                                                 },
@@ -180,6 +187,9 @@ $(function(){
                                                 //console.log(res);
                                                 //alert("res:"+JSON.stringify(result));
                                                 //alert(result.body.id);
+                                                if(res.meta.status == 401 && res.meta.message == "Unauthorized!"){
+                                                    location.href = "login.html"
+                                                }
                                                 window.sessionStorage.id = result.body.id;
                                                 window.location.href = "jiesan.html";
                                             },
@@ -220,6 +230,9 @@ $(function(){
                         //console.log(res);
                         //window.localStorage.pledgeAmount = res.body.pledge_amount;
                         //window.localStorage.have_unread_messages = res.body.have_unread_messages;
+                        if(res.meta.status == 401 && res.meta.message == "Unauthorized!"){
+                            location.href = "login.html"
+                        }
                         window.sessionStorage.zhima_score = res.body.zhima_score;
                         window.sessionStorage.balance_pledge = res.body.balance_pledge;
                         window.sessionStorage.balance_normal = res.body.balance_normal;
@@ -269,6 +282,8 @@ $(function(){
                                     if(res.meta.status == 200){
                                         window.sessionStorage.id = res.body.id;
                                         window.location.href ="jiesan.html";
+                                    }else if(res.meta.status == 401 && res.meta.status =="Unauthorized!"){
+                                        location.href = "login.html";
                                     }else{
                                         $(".popup").show().text(res.meta.message);
                                         setTimeout('$(".popup").hide(),$(".popup").text("")',2000);

@@ -1,5 +1,5 @@
 $(function(){
-    FastClick.attach(document.body);
+    // FastClick.attach(document.body);
     $("#feedbackContent").focus();
     //判断是不是在微信里访问
     function is_weixn(){
