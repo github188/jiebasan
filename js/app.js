@@ -370,19 +370,19 @@ $(function(){
                 window.location.href = "rechargeBalance.html";
             }
         }else{
-           if(window.sessionStorage.balance_pledge <= 0.0 || window.sessionStorage.balance_pledge <= "0.0"){
-                $(".quitPopup").css("display","block");
-                $(".Popup-bg").css("display","block");
-                $(".goRecharge").click(function(){
-                    window.sessionStorage.btnMark = "wallet";
-                    $(".quitPopup").css("display","none");
-                    $(".Popup-bg").css("display","none");
-                    window.location.href = "rechargeDeposit.html";
-                });
-            }else if(window.sessionStorage.balance_normal <=0.0 || window.sessionStorage.balance_normal <= "0.0"){
+           // if(window.sessionStorage.balance_pledge <= 0.0 || window.sessionStorage.balance_pledge <= "0.0"){
+           //      $(".quitPopup").css("display","block");
+           //      $(".Popup-bg").css("display","block");
+           //      $(".goRecharge").click(function(){
+           //          window.sessionStorage.btnMark = "wallet";
+           //          $(".quitPopup").css("display","none");
+           //          $(".Popup-bg").css("display","none");
+           //          window.location.href = "rechargeDeposit.html";
+           //      });
+           //  }else if(window.sessionStorage.balance_normal <=0.0 || window.sessionStorage.balance_normal <= "0.0"){
                 window.sessionStorage.btnMark = "wallet";
                 window.location.href = "rechargeBalance.html";
-            }
+            // }
         }
     });
     //查看我的优惠券
