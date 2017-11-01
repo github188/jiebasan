@@ -72,18 +72,22 @@ $(function(){
             //data: JSON.stringify({"name":$(".nickname").val()}),
             success:function(res){
                 console.log(res);
-                if(res.body.zhima_score == 'null' ||　res.body.zhima_score == null){
-                    if(res.body.balance_pledge<=0.0){
-                        window.location.href = "rechargeDeposit.html";
-                    }else if(res.body.balance_normal < 0.0){
-                        $(".popup").show().text("您的余额为负");
-                        setTimeout('$(".popup").text(""),$(".popup").hide(),window.location.href = "rechargeDeposit.html"',2000);
-                    }
-                    else{
+                if(res.meta.status == 401 && res.meta.message == "Unauthorized!"){
+                    location.href = "login.html"
+                }else {
+                    if(res.body.zhima_score == 'null' ||　res.body.zhima_score == null){
+                        if(res.body.balance_pledge<=0.0){
+                            window.location.href = "rechargeDeposit.html";
+                        }else if(res.body.balance_normal < 0.0){
+                            $(".popup").show().text("您的余额为负");
+                            setTimeout('$(".popup").text(""),$(".popup").hide(),window.location.href = "rechargeDeposit.html"',2000);
+                        }
+                        else{
+                            openDock();
+                        }
+                    } else{
                         openDock();
                     }
-                } else{
-                    openDock();
                 }
             },
             error:function(res){
